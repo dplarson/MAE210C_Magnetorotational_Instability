@@ -1,10 +1,25 @@
-\documentclass[10pt]{article}
+\documentclass[10pt]{jfm}
 
+% enable figures
+\usepackage{graphicx}
 
-\title{Magnetorotational Instability}
+% enable number citations
+\usepackage{natbib}
 
-\author{Joyce Shi Sim, David P. Larson, and Wonjae Lee}
+\usepackage{amsmath}
 
+% symbol shortcuts
+\newcommand{\del}{\boldsymbol{\nabla}}
+
+%--------------------------------------------------
+% PREAMBLE
+%--------------------------------------------------
+\title[Magnetorotational instability]{Magnetorotational instability: a review}
+
+\author[J.~S. Sim, D.~P. Larson, and W. Lee]{Joyce Shi Sim, 
+    David P. Larson, and Wonjae Lee}
+
+\affiliation{University of California, San Diego}
 
 \begin{document}
 
@@ -15,16 +30,18 @@
 % ABSTRACT
 %--------------------------------------------------
 \begin{abstract}
-Words go here
+The abstract goes here like this.
 \end{abstract}
-
 
 
 %--------------------------------------------------
 % INTRO
 %--------------------------------------------------
 \section{Introduction}
-Words
+\label{sec:intro}
+Background
+
+Review paper \cite{Julien2010}
 
 
 
@@ -32,10 +49,24 @@ Words
 % THEORY
 %--------------------------------------------------
 \section{Theoretical Work}
+\label{sec:theory}
+Derive governing equations, linearize to small perturbations, and determine 
+conditions for stability.
 
 \subsection{Governing Equations}
+\cite{Julien2010} states the governing equations as
+
+\begin{align}
+    \rho \left[ \frac{\partial u}{\partial t} + (u \cdot \del) u \right] &= \del p - \frac{1}{2 \mu_0} \del B^2 + \frac{1}{\mu} (B \cdot \del) B \\
+    \frac{\partial B}{\partial t} + (u \cdot \del) B &= (B \cdot \del) u \\
+    \del \cdot u &= \del \cdot B = 0
+\end{align}
+where $\mu_0$, $B$
+
 
 \subsection{Linearization}
+Linearize governing equations to small perturbations
+
 
 \subsection{Stability Analysis}
 
@@ -45,6 +76,7 @@ Words
 % EXPERIMENTS
 %--------------------------------------------------
 \section{Experimental Work}
+Discuss on experimental work that has been done related to this topic.
 
 
 
@@ -52,6 +84,7 @@ Words
 % NUMERICAL WORK
 %--------------------------------------------------
 \section{Numerical Work}
+Have there been any numerical experiments done that involve the topic.
 
 
 
@@ -59,8 +92,14 @@ Words
 % CONCLUSION
 %--------------------------------------------------
 \section{Conclusion}
-Final words
+Concluding remarks
 
+
+%--------------------------------------------------
+% BIBLIOGRAPHY
+%--------------------------------------------------
+\bibliographystyle{jfm}
+\bibliography{sources}
 
 
 \end{document}
