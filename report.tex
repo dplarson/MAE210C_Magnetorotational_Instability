@@ -199,11 +199,51 @@ magnetic fields (standard MRI) or 2) axial and azimuthal magnetic fields
 % NUMERICAL WORK
 %--------------------------------------------------
 \section{Numerical Work}
-Have there been any numerical experiments done that involve the topic.
 
-There's probably numerical simulations of both standard and helical MRI that
-have already been tested in the lab, but there may also be more large-scale
-simulations (e.g. planet-scale).
+MRI: occurs in a Rayleigh-Stable regime whenever a weak poloidal magnetic field is present.
+
+Accretion can only occur with a efficient mechanism for outward transport of angular momentum. There are many suggested processes that can lead to efficient accretion but none leads to substantial outward angular momentum transport. Before using any model, there is a need to understand the angular momentum transport characteristics so that the appropriate equations can be used. The flow could be turbulent but there is no clear reason why there would be turbulence since there is no known instability that will encourage turbulent flow.
+
+Numerical simulations are employed to try to explain the anomalous viscosity and magnetic field generation. Viscous stresses is insufficient for explaining the outward transport of angular momentum so there is a need for some other mechanism. Purely hydrodynamic flow will not generate that as will be shown by HGB and a weak magnetic field is needed. A strong magnetic field will suppress MRI as shown by Liu 2008. From linear stability analysis of the exact nonlinear streaming solution done by Goodman \& Xu 1994, we know the magnetic field perturbations grows exponentially, indicating that the solution is unstable. 3D numerical simulation will help to confirm this analysis.
+
+Direct numerical simulations (DNS) are done to solve the magnetohydrodynamic equations for: compressible and incompressible; ideal and non-ideal; 2D and 3D; axisymmetric and non-axisymmetric; field strength; resolution; computational domain size; incorporation of coriolis; and tidal forcing.
+
+With regards to 2D vs 3D simulations, a good comparison was done by Hawley et al HGB 1995 where they did a local shearing box model which incorporated coriolis and tidal forcing but neglects background gradients in pressure and density (not important unless radial oscillations are significant). Periodic boundary conditions were used with an added shearing component to the radial direction. " Method of characteristics-constrained transport" algorithm as explained in Hawley \& Stone 1995 was implemented.
+
+The comparison of the 3D simulations results from HGB with the 2D results from Balbus et al BGH 1994 shows significant difference. The 2D results have a general channel/streaming flow solution whereas the 3D results may go through the channel flow but eventually evolves further into a turbulent flow with some not going through the channel flow at all. Note: vertical component of gravity, hence buoyancy, was  ignored and since their simulations showed significant density contrast, the shearing box model is not self-consistent. Purely hydrodynamic turbulence did not give significant angular momentum transport needed even when the initial conditions had strong turbulence structures. Their 3D results suggest that accretion disks are well described by Euler's, ignoring the viscous terms from Navier Stokes.
+
+Squire's theorem says that for each unstable 3D disturbances, there are corresponding 2D disturbance that are more unstable. How does that apply here?
+
+Non-axisymmetric Fleming et al 2000 - suggest saturation does occur even when Elsasser numb $\Delta \ge 1$ if non-axisymmetric disturbances are allowed to evolve.
+
+If Alfven speed is slower than sound speed, equations can be simplified to be incompressible since it is not fundamental to the instability Balbus \& Hawley 1991....
+
+Incompressible shearing box : Lesur \& Longaretti (2007)
+
+Liu 2008 (also Princeton MRI experiments) simulated nonlinear development of MRI in a non-ideal magnetohydrodynamic Taylor-Couette flow (mimicking an on-going experiment) using ZEUS-MP 2.0 code (Hayes et al 2006), which is a time-explicit, compressible, astrophysical ideal MHD parallel 3D code with added viscosity and resistivity for axisymmetric flows in cylindrical coordinates. He shows that the saturation of MRI causes a inflowing 'jet' feature which is opposite to the usual Ekman circulation and enhances angular momentum transport radially outward, which is what is needed, agreeing with HGB. Note: Stable MRI regime ($ Re \le 1600$) enhances vertical angular momentum transport while in unstable MRI regime ( $ Re \ge 3200$), MRI kicks in, resulting in more radial angular momentum transport as compared with vertical.
+
+The use of the shearing box model has its limitations as pointed out by HGB as they do not permit any dynamics involving the background shear, which is taken as imposed and constant in space and time. Regev \& Umurhan (2008).. With regards to resolution which is tied in with the model used, the efficiency of angular momentum transport appears to decrease with improved resolution as shown by Fomang \& Papaloizou 2007, suggesting that transport rates estimated on basis of ideal MHD are affected by grid-scale dissipation and overestimate the efficiency of angular momentum extraction by MRI. Kapyla \& Korpi 2008 also worked on resolution dependence of $\alpha$, the Shakura-Sunyaev number and the possible decline of the angular momentum transport rate with decreasing Pm.
+
+Sawai et al 2013 simulated a global 3D MRI axisymmetric, ideal model. They did not find any channel flow solutions as HGB did. Increasing spatial resolution contributed to approximate convergence in the exponential growth rate but not that of the saturation of magnetic field due to large numerical diffusion.
+
+Kirillov et al 2012 presents a unifying description of the helical and azimuthal versions of MRI, and they also identify the universal character of the 'Liu' limit $2(1 - 2) \approx - 0.8284$ for the critical Rossby number. (From this universal characteristics, they are led to the prediction that the instability will be governed by a mode with an azimuthal wavenumber that is proportional to the ratio of axial to azimuthal applied magnetic field, when this ratio becomes large and the Rossby number is close to the Liu limit)
+
+Miller \& Stone 1999 worked on vertically stratified disks using a shearing box model and found that turbulent magnetised disk can produce a magnetised corona in laminar flow through MRI.
+
+The influence of viscosity and electrical resistivity on the MRI (Pessah \& Chan 2008)
+  
+From Julien n Knobloch: Reduced equations- Case A ($ \delta = \epsilon, \Lambda = O(1) $ )\\*
+ a) Single Mode theory \\*
+ b) Stress-free boundary conditions \\*
+ c) Random initial conditions \\*
+ 
+ Reduced equations- Case B ($  \epsilon =O( \delta), \Lambda \gg 1 $ ) \\*
+ a) Single Mode Solutions \\*
+ b) Multi-mode Sollutions \\*
+ c) Random initial Perturbations \\*
+ d) Dissipation and Saturation \\*
+ 
+Note: Accretional ejection instability (AEI), as suggested by Caunt \& Tagger 2001, gives the same angular momentum transport needed as compared to the global MRI but the instability requires a fairly strong magnetic field. So need an external source, possibly from MRI.
 
 
 
