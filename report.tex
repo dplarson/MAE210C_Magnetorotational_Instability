@@ -70,8 +70,52 @@ Also outline what the report will cover (probably as the last paragraph).
 % PHYSICAL EXPLANATION
 %--------------------------------------------------
 \section{Physical Explanation}
-Physical explanation of magnetohydrodynamic (MHD) equations, concept of "frozen-in-field",
-analogy of magnetic and string tension, main idea of MRI
+
+%
+% CONDUCTING FLUID
+%
+\subsection{Perfectly conducting fluid in magnetic field}
+
+When fluid can conduct electricity with negligible resistivity, the fluid is tied to magnetic fields threading itself. We can combine Ohm's Law in ideal conductor and Faraday's equation to get a transport equation for magnetic field,
+\begin{align}
+    \frac{\partial \mathbf{B}}{\partial t} = \del \times (\mathbf{u}\times \mathbf{B}).
+\end{align}
+
+Assuming incompressibility, we get,
+\begin{align}
+    \frac{D \mathbf{B}}{D t} = (\mathbf{B}\cdot \del) \mathbf{u},
+\end{align}
+where $\frac{D}{Dt}$ is the convective derivative $\frac{D}{Dt}=\frac{\partial}{\partial t}+(\mathbf{u}\cdot\del)$.
+
+Considering short line element $d\mathbf{l}$ moving with fluid, we can express the rate of change of $d\mathbf{l}$ as
+\begin{align}
+    \frac{D}{Dt}\left(d\mathbf{l}\right) = \mathbf{u}(\mathbf{x}+d\mathbf{l})-\mathbf{u}(\mathbf{x})=(d\mathbf{l}\cdot\del)\mathbf{u}.
+\end{align}
+Comparing two equations above, we can conclude that $\mathbf{B}$ and $d\mathbf{l}$ obey the same equation [\cite{Davidson2001}]. Therefore, the field lines are frozen into the fluid.
+
+
+%
+% MAGNETIC TENSION
+%
+\subsection{Magnetic tension}
+
+When the fluid elements are displaced from their equilibrium position, the magnetic field lines move together with fluid elements and behave like elastic bands frozen-into the fluid. Using Ampere's law, the Lorenz force $(\mathbf{J}\times\mathbf{B})$ may be written as
+\begin{align}
+    \mathbf{J}\times\mathbf{B} &= - \del\left(\frac{B^2}{2\mu}\right) +\frac{(\mathbf{B}\cdot \del)\mathbf{B}}{\mu}
+    =- \del\left(\frac{B^2}{2\mu}\right)+\frac{\partial}{\partial s} \left[\frac{B^2}{2\mu}\right]\hat{e}_t - \frac{B^2}{\mu R}\hat{e}_n
+\end{align} 
+where $R$ is radius of curvature and $s$ is a coordinate along a magnetic field line. $\hat{e}_t$ and $\hat{e}_n$ are tangential and normal unit vectors respectively. The last two terms are magnetic tension forces in tangential and normal directions. These forces can also be interpreted as tensile stress of $B^2/2\mu$ acting on the end of the tube [\cite{Davidson2001}]. 
+
+This tensile force which is also know as Faraday or Maxwell tension is analogous to a force acting on a spring. Considering a displacement $\boldsymbol{\xi}=\mathbf{v}\delta t$, the Faraday's equation can be written as $\delta \mathbf{B} = ikB\boldsymbol{\xi}$. The magnetic tension for small displacement per unit density $\rho$ is
+\begin{align}
+    \frac{(\mathbf{B}\cdot\del)\delta \mathbf{B}}{\mu \rho}=\frac{ikB\delta \mathbf{B}}{\mu \rho} = -\frac{k^2 B^2}{\mu\rho} \boldsymbol{\xi} = -K \boldsymbol{\xi},
+\end{align}
+where $K$ is analogous to a spring constant [\cite{Wiki:MRI}]. The equation has same form of Hooke's Law for a spring.
+
+%
+% MRI
+%
+\subsection{Magnetoroational instability}
 
 
 
