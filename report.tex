@@ -6,6 +6,9 @@
 % enable figures
 \usepackage{graphicx}
 
+% set path to figures
+\graphicspath{{figures/}}
+
 % enable number citations
 \usepackage{natbib}
 
@@ -186,14 +189,49 @@ Considering the imaginary part of the equation, we have
 % EXPERIMENTS
 %--------------------------------------------------
 \section{Laboratory Experiments}
-Discuss on experimental work that has been done related to this topic.
+\label{sec:experiments}
 
-Try to categorize experiments so we can group the discussion. Also, the main
-focus is to explain what has been done to attempt to recreate MRI in the lab.
+Experiments: Donnelly and Ozima 1960 = use magnetic fields to stabilize centrifugal instability of Taylor-Couette flow; Ji et al. 2001 and others = use magnetic fields to generate instability in otherwise stable Taylor-Couette flow
 
-NOTE: most literature on MRI experiments seem to be about either 1) axial-only
-magnetic fields (standard MRI) or 2) axial and azimuthal magnetic fields
-(helical MRI).
+Three types of MRI experiments: 1) standard MRI = axial magnetic field, 2) helical MRI = axial and azimuthal magnetic fields, 3) azimuthal MRI = only azimuthal magnetic fields
+
+%
+% STANDARD
+%
+\subsection{Standard MRI}
+Axial magnetic field
+
+\cite{Ji2001}, \cite{Ji2002} = first modern MRI experiments
+
+\cite{Sisan2004} = inner rotating (copper) sphere, outer fixed (steel) sphere, liquid sodium; found $\beta_c$ above which MRI occurred.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.35\textwidth]{Sisan2004_diagram}
+    \caption{Diagram from \cite{Sisan2004} showing the experimental setup. The fixed outer steel sphere contains liquid sodium (the conducting fluid), with the magnetic field imposed coaxially to the rotating inner copper sphere. The magnetic fields and fluid velocity are measured using Hall probes and Doppler velocimetry.}
+\end{figure}
+
+
+Obstacles of standard MRI in lab experiments: keeping background flow laminar (to ensure that the first instability was MRI and not turbulence); minimize Ekman effect; achieve high enough speeds without breaking experiment
+
+
+%
+% HELICAL MRI
+%
+\subsection{Helical MRI}
+
+\cite{Hollerbach2005} = proposed helical (axial + azimuthal magnetic fields) to allow MRI at lower Reynolds
+
+\cite{Stefani2006}, \cite{Stefani2007}  = experimentally proved helical MRI
+
+\cite{Stefani2009} = improve helical MRI experiment
+
+
+%
+% AZIMUTHAL
+%
+\subsection{Azimuthal MRI}
+Azimuthal magnetic fields only (no axial)
 
 
 
