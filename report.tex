@@ -47,8 +47,8 @@
 % ABSTRACT
 %--------------------------------------------------
 \begin{abstract}
-We review current research on magneotorotational instability (MRI) as a mechanism
-for momentum transporation in accretion disks.
+We review current research on magneotorotational instability (MRI) as a 
+mechanism for momentum transporation in accretion disks.
 \end{abstract}
 
 
@@ -76,7 +76,10 @@ Also outline what the report will cover (probably as the last paragraph).
 %
 \subsection{Perfectly conducting fluid in magnetic field}
 
-When fluid can conduct electricity with negligible resistivity, the fluid is tied to magnetic fields threading itself. We can combine Ohm's Law in ideal conductor and Faraday's equation to get a transport equation for magnetic field,
+When fluid can conduct electricity with negligible resistivity, the fluid is 
+tied to magnetic fields threading itself. We can combine Ohm's Law in ideal 
+conductor and Faraday's equation to get a transport equation for magnetic 
+field,
 \begin{align}
     \frac{\partial \mathbf{B}}{\partial t} = \del \times (\mathbf{u}\times \mathbf{B}).
 \end{align}
@@ -87,11 +90,14 @@ Assuming incompressibility, we get,
 \end{align}
 where $\frac{D}{Dt}$ is the convective derivative $\frac{D}{Dt}=\frac{\partial}{\partial t}+(\mathbf{u}\cdot\del)$.
 
-Considering short line element $d\mathbf{l}$ moving with fluid, we can express the rate of change of $d\mathbf{l}$ as
+Considering short line element $d\mathbf{l}$ moving with fluid, we can express 
+the rate of change of $d\mathbf{l}$ as
 \begin{align}
     \frac{D}{Dt}\left(d\mathbf{l}\right) = \mathbf{u}(\mathbf{x}+d\mathbf{l})-\mathbf{u}(\mathbf{x})=(d\mathbf{l}\cdot\del)\mathbf{u}.
 \end{align}
-Comparing two equations above, we can conclude that $\mathbf{B}$ and $d\mathbf{l}$ obey the same equation [\cite{Davidson2001}]. Therefore, the field lines are frozen into the fluid.
+Comparing two equations above, we can conclude that $\mathbf{B}$ and 
+$d\mathbf{l}$ obey the same equation [\cite{Davidson2001}]. Therefore, the 
+field lines are frozen into the fluid.
 
 
 %
@@ -99,18 +105,30 @@ Comparing two equations above, we can conclude that $\mathbf{B}$ and $d\mathbf{l
 %
 \subsection{Magnetic tension}
 
-When the fluid elements are displaced from their equilibrium position, the magnetic field lines move together with fluid elements and behave like elastic bands frozen-into the fluid. Using Ampere's law, the Lorenz force $(\mathbf{J}\times\mathbf{B})$ may be written as
+When the fluid elements are displaced from their equilibrium position, the 
+magnetic field lines move together with fluid elements and behave like elastic
+bands frozen-into the fluid. Using Ampere's law, the Lorenz force 
+$(\mathbf{J}\times\mathbf{B})$ may be written as
 \begin{align}
     \mathbf{J}\times\mathbf{B} &= - \del\left(\frac{B^2}{2\mu}\right) +\frac{(\mathbf{B}\cdot \del)\mathbf{B}}{\mu}
     =- \del\left(\frac{B^2}{2\mu}\right)+\frac{\partial}{\partial s} \left[\frac{B^2}{2\mu}\right]\hat{e}_t - \frac{B^2}{\mu R}\hat{e}_n
 \end{align} 
-where $R$ is radius of curvature and $s$ is a coordinate along a magnetic field line. $\hat{e}_t$ and $\hat{e}_n$ are tangential and normal unit vectors respectively. The last two terms are magnetic tension forces in tangential and normal directions. These forces can also be interpreted as tensile stress of $B^2/2\mu$ acting on the end of the tube [\cite{Davidson2001}]. 
+where $R$ is radius of curvature and $s$ is a coordinate along a magnetic 
+field line. $\hat{e}_t$ and $\hat{e}_n$ are tangential and normal unit vectors 
+respectively. The last two terms are magnetic tension forces in tangential and 
+normal directions. These forces can also be interpreted as tensile stress of 
+$B^2/2\mu$ acting on the end of the tube \cite[see][]{Davidson2001}. 
 
-This tensile force which is also know as Faraday or Maxwell tension is analogous to a force acting on a spring. Considering a displacement $\boldsymbol{\xi}=\mathbf{v}\delta t$, the Faraday's equation can be written as $\delta \mathbf{B} = ikB\boldsymbol{\xi}$. The magnetic tension for small displacement per unit density $\rho$ is
+This tensile force which is also know as Faraday or Maxwell tension is 
+analogous to a force acting on a spring. Considering a displacement 
+$\boldsymbol{\xi}=\mathbf{v}\delta t$, the Faraday's equation can be written 
+as $\delta \mathbf{B} = ikB\boldsymbol{\xi}$. The magnetic tension for small 
+displacement per unit density $\rho$ is
 \begin{align}
     \frac{(\mathbf{B}\cdot\del)\delta \mathbf{B}}{\mu \rho}=\frac{ikB\delta \mathbf{B}}{\mu \rho} = -\frac{k^2 B^2}{\mu\rho} \boldsymbol{\xi} = -K \boldsymbol{\xi},
 \end{align}
-where $K$ is analogous to a spring constant [\cite{Wiki:MRI}]. The equation has same form of Hooke's Law for a spring.
+where $K$ is analogous to a spring constant \citep[see][]{Wiki:MRI}. The 
+equation has same form of Hooke's Law for a spring.
 
 %
 % MRI
@@ -125,7 +143,13 @@ where $K$ is analogous to a spring constant [\cite{Wiki:MRI}]. The equation has 
 \section{Theoretical Work}
 \label{sec:theory}
 
-\cite{Acheson1973} and \cite{Knobloch1992} showed the linear stability analysis of rotating magneto-fluid bounded in coaxial cylinder. For the case of gaseous astrophysical disks in unbounded geometry was shown in \cite{Balbus1991}. The condition for stability was shown to be radially increasing angular velocity profile. We present a linear stability analysis of MRI for bounded case following \cite{Acheson1972}, \cite{Acheson1973a}, \cite{Knobloch1992} and \cite{Julien2010}.
+\cite{Acheson1973} and \cite{Knobloch1992} showed the linear stability analysis
+of rotating magneto-fluid bounded in coaxial cylinder. For the case of gaseous 
+astrophysical disks in unbounded geometry was shown in \cite{Balbus1991}. The 
+condition for stability was shown to be radially increasing angular velocity 
+profile. We present a linear stability analysis of MRI for bounded case 
+following \cite{Acheson1972}, \cite{Acheson1973a}, \cite{Knobloch1992}, and 
+\cite{Julien2010}.
 
 
 %
@@ -133,7 +157,9 @@ where $K$ is analogous to a spring constant [\cite{Wiki:MRI}]. The equation has 
 %
 \subsection{Governing equation}
 
-The wave dispersion equation of a cylindrical magneto-fluid can be obtained from the magnetohydrodynamic (MHD) equations. Assuming the fluid is inviscid and perfectly conducting, the ideal MHD equations are
+The wave dispersion equation of a cylindrical magneto-fluid can be obtained 
+from the magnetohydrodynamic (MHD) equations. Assuming the fluid is inviscid 
+and perfectly conducting, the ideal MHD equations are
 \begin{align}
     \rho\left(\frac{\partial\mathbf{u}}{\partial t}+\mathbf{u}\cdot\del\mathbf{u}\right) &= -\del p +\mathbf{J}\times\mathbf{B} \\
     \frac{\partial \rho}{\partial t} + \del\cdot(\rho \mathbf{u})&=0 \\
@@ -142,7 +168,10 @@ The wave dispersion equation of a cylindrical magneto-fluid can be obtained from
     \del \times \mathbf{B} &= \mu \mathbf{J}.
 \end{align}
 
-To investigate MRI, one can consider homogeneous incompressible fluid rotating with angular velocity $\Omega(r)=\frac{V(r)}{r}$ in externally imposed magnetic fields $\mathbf{B}_0 = [0,B_\phi(r),B_z(r)]$. Combining electromagnetic equations with momentum relation, we get the appropriate MHD equations,
+To investigate MRI, one can consider homogeneous incompressible fluid rotating 
+with angular velocity $\Omega(r)=\frac{V(r)}{r}$ in externally imposed magnetic 
+fields $\mathbf{B}_0 = [0,B_\phi(r),B_z(r)]$. Combining electromagnetic 
+equations with momentum relation, we get the appropriate MHD equations,
 \begin{align}
     \frac{\partial \mathbf{u}}{\partial t}+(\mathbf{u}\cdot\del)\mathbf{u} &= -\frac{1}{\rho}\del\left(P+\frac{\mathbf{B}^2}{2\mu}\right)+\frac{1}{\mu\rho}(\mathbf{B}\cdot\del)\mathbf{B}\\
     \frac{\partial \mathbf{B}}{\partial t} +(\mathbf{u}\cdot\del)\mathbf{B} &=(\mathbf{B}\cdot\del)\mathbf{u} \\
@@ -156,7 +185,8 @@ To investigate MRI, one can consider homogeneous incompressible fluid rotating w
 %
 \subsection{Linear perturbation equation and eigenvalue problem}
 
-We can get linearized equations by perturbing the basic state by small amount of $\mathbf{u_1}$ and $\mathbf{b_1}$ for velocity and magnetic fields.
+We can get linearized equations by perturbing the basic state by small amount
+of $\mathbf{u_1}$ and $\mathbf{b_1}$ for velocity and magnetic fields.
 %\begin{align}
 %\frac{\partial \mathbf{u}_1}{\partial t} +(\mathbf{u}_0\cdot \del)\mathbf{u}_1 &= -\frac{1}{\rho}\del\left(p_1+\frac{\mathbf{B}_0\cdot\mathbf{B}_1}{\mu}\right) +\frac{\mathbf{B}_0\cdot\del\mathbf{B}_1+\mathbf{B}_1\cdot\del\mathbf{B}_0}{\mu \rho}-(\mathbf{u}_1\cdot \del)\mathbf{u}_0\\
 %\frac{\partial \mathbf{B}_1}{\partial t}+(\mathbf{u}_0\cdot \del)\mathbf{B}_1 &= (\mathbf{B}_0\cdot \del)\mathbf{u}_1+(\mathbf{B}_1\cdot \del)\mathbf{u}_0-(\mathbf{u}_1\cdot \del)\mathbf{B}_0\\
@@ -177,10 +207,11 @@ The axisymmetric perturbation is assumed to have the form
 \end{align}
 where $V_{A\phi}=\frac{B_\phi (r)}{\sqrt{\mu\rho}}$, $V_{Az}=\frac{B_z (r)}{\sqrt{\mu\rho}}$ are Alfv\'en speeds for associated external magnetic field components.
 
-Solving the normal mode equation set for radial velocity perturbation $\hat{u}_r = u$, \cite{Acheson1973a} obtained following eigenvalue problem,
+Solving the normal mode equation set for radial velocity perturbation 
+$\hat{u}_r = u$, \cite{Acheson1973a} obtained following eigenvalue problem,
 \begin{align}
-\frac{d}{dr}\left[(\omega^2-k^2 V_{Az}^2)\left(\frac{du}{dr}+\frac{u}{r}\right)\right]-k^2\left[\omega^2-k^2 V_{Az}^2+r\frac{d}{dr}\left(\frac{V_{A\phi}^2}{r^2}-\frac{V^2}{r^2}\right)\right]u \nonumber \\
-= -\frac{4 k^2}{r^2}\frac{(k V_{A\phi} V_{Az}+\omega V)^2}{(\omega^2-k^2 V_{Az}^2)} u.
+    \frac{d}{dr}\left[(\omega^2-k^2 V_{Az}^2)\left(\frac{du}{dr}+\frac{u}{r}\right)\right]-k^2\left[\omega^2-k^2 V_{Az}^2+r\frac{d}{dr}\left(\frac{V_{A\phi}^2}{r^2}-\frac{V^2}{r^2}\right)\right]u \nonumber \\
+    = -\frac{4 k^2}{r^2}\frac{(k V_{A\phi} V_{Az}+\omega V)^2}{(\omega^2-k^2 V_{Az}^2)} u.
 \end{align}
 
 
@@ -191,7 +222,12 @@ Solving the normal mode equation set for radial velocity perturbation $\hat{u}_r
 
 \subsubsection{Standard magnetorotational instability}
 
-Consider a standard MRI of radially bounded coaxial fluid cylinder with externally imposed axial magnetic field but without axial current flowing. Therefore, we have $V_{Az}=\frac{B_z}{\sqrt{\rho\mu}}=const \neq 0$ and $V_{A\phi}=\frac{B_\phi}{\sqrt{\rho\mu}}=0$. Considering boundary condition $u(r_1)=u(r_2)=0$, we multiply the eigenvalue equation by complex conjugate of $u$ and integrate over radial coordinate,
+Consider a standard MRI of radially bounded coaxial fluid cylinder with 
+externally imposed axial magnetic field but without axial current flowing. 
+Therefore, we have $V_{Az}=\frac{B_z}{\sqrt{\rho\mu}}=const \neq 0$ and 
+$V_{A\phi}=\frac{B_\phi}{\sqrt{\rho\mu}}=0$. Considering boundary condition 
+$u(r_1)=u(r_2)=0$, we multiply the eigenvalue equation by complex conjugate 
+of $u$ and integrate over radial coordinate,
 \begin{align}
     (\omega^2-k^2 V_{Az}^2)^2 = \frac{k^2}{D}\int_{r_1}^{r_2}\left[\frac{\omega^2}{r^2}\frac{d}{dr}r^2V^2 -r^2 k^2 V_{Az}^2 \frac{d}{dr}\left(\frac{V^2}{r^2}\right)\right]|u|^2 dr
 \end{align}   
@@ -200,22 +236,30 @@ where
     D\equiv \int_{r_1}^{r_2}\left(r \left|\frac{du}{dr}\right|^2 +\frac{|u|^2}{r}+k^2 r |u|^2 \right) dr >0
 \end{align}
 
-Accoring to \cite{Chandrasekhar1960}, $\omega^2$ must be real. We get stable modes with $\omega^2>0$ and unstable modes with $\omega^2<0$. If the angular velocity increases radially outward, $\frac{d}{dr}\left(\frac{V^2}{r^2}\right)>0$, the system is stable because $\omega^2$ is bounded from below by positive number, 
+Accoring to \cite{Chandrasekhar1960}, $\omega^2$ must be real. We get stable 
+modes with $\omega^2>0$ and unstable modes with $\omega^2<0$. If the angular 
+velocity increases radially outward, $\frac{d}{dr}\left(\frac{V^2}{r^2}\right)>0$, 
+the system is stable because $\omega^2$ is bounded from below by positive number, 
 \begin{align}
     \omega^2>\frac{r^2k^2 V_{Az}^2 \frac{d}{dr}\left(\frac{V^2}{r^2}\right)}{4\frac{V^2}{r}+r^2\frac{d}{dr}\left(\frac{V^2}{r^2}\right)}>0.
 \end{align}
-If we have radially decreasing anguar velocity profile, $\frac{d}{dr}\left(\frac{V^2}{r^2}\right)<0$, somewhere $r_1<r<r_2$, then $\omega^2$ may have negative solution which makes the system unstable.
+If we have radially decreasing anguar velocity profile, 
+$\frac{d}{dr}\left(\frac{V^2}{r^2}\right)<0$, somewhere $r_1<r<r_2$, then 
+$\omega^2$ may have negative solution which makes the system unstable.
 
 \subsubsection{Helical magnetorotational instability}
 
-When the external nonzero magnetic fields in axial and azimuthal directions are considered, it was found that the eigenvalue equation can be written as
+When the external nonzero magnetic fields in axial and azimuthal directions are
+considered, it was found that the eigenvalue equation can be written as
 \begin{align}
     \frac{d}{dr}r\frac{du}{dr}-\frac{u}{r}-k^2ru = \frac{k^2}{(\omega^2-k^2 V_{Az}^2)^2}\left[r^2 \frac{d}{dr}\left(\frac{V_{A\phi}^2-V^2}{r^2}\right)
     (\omega^2-k^2V_{Az}^2) 
     -\frac{4}{r}(kV_{A\phi}V_{Az}-\omega V)^2\right]u
 \end{align}
 
-According to \cite{Knobloch1992} and \cite{Julien2010}, the exponentially growing mode $\omega =-i\lambda$, $\lambda>0$ is possilbe when the eigenvalue relation has following form
+According to \cite{Knobloch1992} and \cite{Julien2010}, the exponentially 
+growing mode $\omega =-i\lambda$, $\lambda>0$ is possilbe when the eigenvalue 
+relation has following form
 \begin{align}
     (\lambda^2 +k^2 V_{Az}^2)^2 = \frac{k^2}{D}\int_{r_1}^{r_2} \left[ r^2 \frac{d}{dr}\left( \frac{V_{A\phi}^2-V^2}{r^2}\right)(\lambda^2+k^2 V_{Az}^2) + \frac{4}{r}(k V_{A\phi} V_{Az}-i\lambda V)^2 \right]|u|^2 dr.
 \end{align}
@@ -225,7 +269,8 @@ Considering the imaginary part of the equation, we have
     \int_{r_1}^{r_2} \frac{1}{r}V_\phi V |u|^2 dr =0
 \end{align}
 
-\cite{Knobloch1992} shows exponentially growing instability is only possible when $V_{A\phi}$ or $V$ changes sign somewhere in $r_1< r < r_2$.
+\cite{Knobloch1992} shows exponentially growing instability is only possible 
+when $V_{A\phi}$ or $V$ changes sign somewhere in $r_1< r < r_2$.
 
 
 
@@ -235,9 +280,13 @@ Considering the imaginary part of the equation, we have
 \section{Laboratory Experiments}
 \label{sec:experiments}
 
-Experiments: Donnelly and Ozima 1960 = use magnetic fields to stabilize centrifugal instability of Taylor-Couette flow; Ji et al. 2001 and others = use magnetic fields to generate instability in otherwise stable Taylor-Couette flow
+Experiments: Donnelly and Ozima 1960 = use magnetic fields to stabilize 
+centrifugal instability of Taylor-Couette flow; Ji et al. 2001 and others = 
+use magnetic fields to generate instability in otherwise stable Taylor-Couette flow
 
-Three types of MRI experiments: 1) standard MRI = axial magnetic field, 2) helical MRI = axial and azimuthal magnetic fields, 3) azimuthal MRI = only azimuthal magnetic fields
+Three types of MRI experiments: 1) standard MRI = axial magnetic field, 2) 
+helical MRI = axial and azimuthal magnetic fields, 3) azimuthal MRI = only 
+azimuthal magnetic fields
 
 %
 % STANDARD
@@ -247,7 +296,8 @@ Axial magnetic field
 
 \cite{Ji2001}, \cite{Ji2002} = first modern MRI experiments
 
-\cite{Sisan2004} = inner rotating (copper) sphere, outer fixed (steel) sphere, liquid sodium; found $\beta_c$ above which MRI occurred.
+\cite{Sisan2004} = inner rotating (copper) sphere, outer fixed (steel) sphere, 
+liquid sodium; found $\beta_c$ above which MRI occurred.
 
 \begin{figure}[t]
     \centering
@@ -256,7 +306,9 @@ Axial magnetic field
 \end{figure}
 
 
-Obstacles of standard MRI in lab experiments: keeping background flow laminar (to ensure that the first instability was MRI and not turbulence); minimize Ekman effect; achieve high enough speeds without breaking experiment
+Obstacles of standard MRI in lab experiments: keeping background flow laminar 
+(to ensure that the first instability was MRI and not turbulence); minimize 
+Ekman effect; achieve high enough speeds without breaking experiment
 
 
 %
@@ -264,9 +316,10 @@ Obstacles of standard MRI in lab experiments: keeping background flow laminar (t
 %
 \subsection{Helical MRI}
 
-\cite{Hollerbach2005} = proposed helical (axial + azimuthal magnetic fields) to allow MRI at lower Reynolds
+\cite{Hollerbach2005} = proposed helical (axial + azimuthal magnetic fields) 
+to allow MRI at lower Reynolds
 
-\cite{Stefani2006}, \cite{Stefani2007}  = experimentally proved helical MRI
+\cite{Stefani2006, Stefani2007}  = experimentally proved helical MRI
 
 \cite{Stefani2009} = improve helical MRI experiment
 
@@ -284,37 +337,108 @@ Azimuthal magnetic fields only (no axial)
 %--------------------------------------------------
 \section{Numerical Work}
 
-MRI: occurs in a Rayleigh-Stable regime whenever a weak poloidal magnetic field is present.
+MRI: occurs in a Rayleigh-Stable regime whenever a weak poloidal magnetic 
+field is present.
 
-Accretion can only occur with a efficient mechanism for outward transport of angular momentum. There are many suggested processes that can lead to efficient accretion but none leads to substantial outward angular momentum transport. Before using any model, there is a need to understand the angular momentum transport characteristics so that the appropriate equations can be used. The flow could be turbulent but there is no clear reason why there would be turbulence since there is no known instability that will encourage turbulent flow.
+Accretion can only occur with a efficient mechanism for outward transport of 
+angular momentum. There are many suggested processes that can lead to efficient
+accretion but none leads to substantial outward angular momentum transport. 
+Before using any model, there is a need to understand the angular momentum 
+transport characteristics so that the appropriate equations can be used. The 
+flow could be turbulent but there is no clear reason why there would be 
+turbulence since there is no known instability that will encourage turbulent 
+flow.
 
-Numerical simulations are employed to try to explain the anomalous viscosity and magnetic field generation. Viscous stresses is insufficient for explaining the outward transport of angular momentum so there is a need for some other mechanism. Purely hydrodynamic flow will not generate that as will be shown by HGB and a weak magnetic field is needed. A strong magnetic field will suppress MRI as shown by \cite{Liu2008}. From linear stability analysis of the exact nonlinear streaming solution done by \cite{Goodman1994}, we know the magnetic field perturbations grows exponentially, indicating that the solution is unstable. 3D numerical simulation will help to confirm this analysis.
+Numerical simulations are employed to try to explain the anomalous viscosity 
+and magnetic field generation. Viscous stresses is insufficient for explaining 
+the outward transport of angular momentum so there is a need for some other 
+mechanism. Purely hydrodynamic flow will not generate that as will be shown by
+HGB and a weak magnetic field is needed. A strong magnetic field will suppress
+MRI as shown by \cite{Liu2008}. From linear stability analysis of the exact 
+nonlinear streaming solution done by \cite{Goodman1994}, we know the magnetic
+field perturbations grows exponentially, indicating that the solution is 
+unstable. 3D numerical simulation will help to confirm this analysis.
 
-Direct numerical simulations (DNS) are done to solve the magnetohydrodynamic equations for: compressible and incompressible; ideal and non-ideal; 2D and 3D; axisymmetric and non-axisymmetric; field strength; resolution; computational domain size; incorporation of coriolis; and tidal forcing.
+Direct numerical simulations (DNS) are done to solve the magnetohydrodynamic 
+equations for: compressible and incompressible; ideal and non-ideal; 2D and 3D;
+axisymmetric and non-axisymmetric; field strength; resolution; computational 
+domain size; incorporation of coriolis; and tidal forcing.
 
-With regards to 2D vs 3D simulations, a good comparison was done by Hawley et al HGB 1995 where they did a local shearing box model which incorporated coriolis and tidal forcing but neglects background gradients in pressure and density (not important unless radial oscillations are significant). Periodic boundary conditions were used with an added shearing component to the radial direction. " Method of characteristics-constrained transport" algorithm as explained in \cite{Hawley1995} was implemented.
+With regards to 2D vs 3D simulations, a good comparison was done by 
+\cite{Hawley1995} HGB where they did a local shearing box model which 
+incorporated coriolis and tidal forcing but neglects background gradients in 
+pressure and density (not important unless radial oscillations are 
+significant). Periodic boundary conditions were used with an added shearing 
+component to the radial direction. " Method of characteristics-constrained 
+transport" algorithm as explained in \cite{Hawley1995} was implemented.
 
-The comparison of the 3D simulations results from HGB with the 2D results from Balbus et al BGH 1994 shows significant difference. The 2D results have a general channel/streaming flow solution whereas the 3D results may go through the channel flow but eventually evolves further into a turbulent flow with some not going through the channel flow at all. Note: vertical component of gravity, hence buoyancy, was  ignored and since their simulations showed significant density contrast, the shearing box model is not self-consistent. Purely hydrodynamic turbulence did not give significant angular momentum transport needed even when the initial conditions had strong turbulence structures. Their 3D results suggest that accretion disks are well described by Euler's, ignoring the viscous terms from Navier Stokes.
+The comparison of the 3D simulations results from HGB with the 2D results 
+from Balbus et al BGH 1994 shows significant difference. The 2D results have
+a general channel/streaming flow solution whereas the 3D results may go through
+the channel flow but eventually evolves further into a turbulent flow with some
+not going through the channel flow at all. Note: vertical component of gravity,
+hence buoyancy, was  ignored and since their simulations showed significant 
+density contrast, the shearing box model is not self-consistent. Purely 
+hydrodynamic turbulence did not give significant angular momentum transport 
+needed even when the initial conditions had strong turbulence structures. 
+Their 3D results suggest that accretion disks are well described by Euler's, 
+ignoring the viscous terms from Navier Stokes.
 
-Squire's theorem says that for each unstable 3D disturbances, there are corresponding 2D disturbance that are more unstable. How does that apply here?
+Squire's theorem says that for each unstable 3D disturbances, there are 
+corresponding 2D disturbance that are more unstable. How does that apply here?
 
-Non-axisymmetric \cite{Fleming2000} - suggest saturation does occur even when Elsasser numb $\Delta \ge 1$ if non-axisymmetric disturbances are allowed to evolve.
+Non-axisymmetric \cite{Fleming2000} - suggest saturation does occur even when 
+Elsasser numb $\Delta \ge 1$ if non-axisymmetric disturbances are allowed to 
+evolve.
 
-If Alfven speed is slower than sound speed, equations can be simplified to be incompressible since it is not fundamental to the instability \cite{Balbus1991} ...
+If Alfven speed is slower than sound speed, equations can be simplified to be 
+incompressible since it is not fundamental to the instability \cite{Balbus1991} ...
 
 Incompressible shearing box : \cite{Lesur2007}
 
-\cite{Liu2008} (also Princeton MRI experiments) simulated nonlinear development of MRI in a non-ideal magnetohydrodynamic Taylor-Couette flow (mimicking an on-going experiment) using ZEUS-MP 2.0 code (\cite{Hayes2006}), which is a time-explicit, compressible, astrophysical ideal MHD parallel 3D code with added viscosity and resistivity for axisymmetric flows in cylindrical coordinates. He shows that the saturation of MRI causes a inflowing 'jet' feature which is opposite to the usual Ekman circulation and enhances angular momentum transport radially outward, which is what is needed, agreeing with HGB. Note: Stable MRI regime ($ Re \le 1600$) enhances vertical angular momentum transport while in unstable MRI regime ($Re \ge 3200$), MRI kicks in, resulting in more radial angular momentum transport as compared with vertical.
+\cite{Liu2008} (also Princeton MRI experiments) simulated nonlinear development
+of MRI in a non-ideal magnetohydrodynamic Taylor-Couette flow (mimicking an 
+on-going experiment) using ZEUS-MP 2.0 code (\cite{Hayes2006}), which is a 
+time-explicit, compressible, astrophysical ideal MHD parallel 3D code with 
+added viscosity and resistivity for axisymmetric flows in cylindrical 
+coordinates. He shows that the saturation of MRI causes a inflowing 'jet' 
+feature which is opposite to the usual Ekman circulation and enhances angular
+momentum transport radially outward, which is what is needed, agreeing with 
+HGB. Note: Stable MRI regime ($ Re \le 1600$) enhances vertical angular 
+momentum transport while in unstable MRI regime ($Re \ge 3200$), MRI kicks in, 
+resulting in more radial angular momentum transport as compared with vertical.
 
-The use of the shearing box model has its limitations as pointed out by HGB as they do not permit any dynamics involving the background shear, which is taken as imposed and constant in space and time. \cite{Regev2008}.. With regards to resolution which is tied in with the model used, the efficiency of angular momentum transport appears to decrease with improved resolution as shown by \cite{Fomang2007}, suggesting that transport rates estimated on basis of ideal MHD are affected by grid-scale dissipation and overestimate the efficiency of angular momentum extraction by MRI. \cite{Kapyla2008} also worked on resolution dependence of $\alpha$, the Shakura-Sunyaev number and the possible decline of the angular momentum transport rate with decreasing Pm.
+The use of the shearing box model has its limitations as pointed out by HGB as
+they do not permit any dynamics involving the background shear, which is taken
+as imposed and constant in space and time. \cite{Regev2008}.. With regards to 
+resolution which is tied in with the model used, the efficiency of angular 
+momentum transport appears to decrease with improved resolution as shown by 
+\cite{Fomang2007}, suggesting that transport rates estimated on basis of ideal
+MHD are affected by grid-scale dissipation and overestimate the efficiency of 
+angular momentum extraction by MRI. \cite{Kapyla2008} also worked on resolution
+dependence of $\alpha$, the Shakura-Sunyaev number and the possible decline of
+the angular momentum transport rate with decreasing Pm.
 
-Sawai et al 2013 \cite{Sawai2013} simulated a global 3D MRI axisymmetric, ideal model. They did not find any channel flow solutions as HGB did. Increasing spatial resolution contributed to approximate convergence in the exponential growth rate but not that of the saturation of magnetic field due to large numerical diffusion.
+Sawai et al 2013 \cite{Sawai2013} simulated a global 3D MRI axisymmetric, ideal
+model. They did not find any channel flow solutions as HGB did. Increasing 
+spatial resolution contributed to approximate convergence in the exponential 
+growth rate but not that of the saturation of magnetic field due to large 
+numerical diffusion.
 
-\cite{Kirillov2012} presents a unifying description of the helical and azimuthal versions of MRI, and they also identify the universal character of the 'Liu' limit $2(1 - 2) \approx - 0.8284$ for the critical Rossby number. (From this universal characteristics, they are led to the prediction that the instability will be governed by a mode with an azimuthal wavenumber that is proportional to the ratio of axial to azimuthal applied magnetic field, when this ratio becomes large and the Rossby number is close to the Liu limit)
+\cite{Kirillov2012} presents a unifying description of the helical and 
+azimuthal versions of MRI, and they also identify the universal character of
+the 'Liu' limit $2(1 - 2) \approx - 0.8284$ for the critical Rossby number. 
+(From this universal characteristics, they are led to the prediction that the
+instability will be governed by a mode with an azimuthal wavenumber that is 
+proportional to the ratio of axial to azimuthal applied magnetic field, when
+this ratio becomes large and the Rossby number is close to the Liu limit)
 
-\cite{Miller1999} worked on vertically stratified disks using a shearing box model and found that turbulent magnetised disk can produce a magnetised corona in laminar flow through MRI.
+\cite{Miller1999} worked on vertically stratified disks using a shearing box
+model and found that turbulent magnetised disk can produce a magnetised corona
+in laminar flow through MRI.
 
-The influence of viscosity and electrical resistivity on the MRI (\cite{Pessah2008})
+The influence of viscosity and electrical resistivity on the MRI 
+\citep[see][]{Pessah2008}
   
 From \cite{Julien2010}: Reduced equations- Case A ($ \delta = \epsilon, \Lambda = O(1) $ )\\*
  a) Single Mode theory \\*
@@ -327,7 +451,10 @@ From \cite{Julien2010}: Reduced equations- Case A ($ \delta = \epsilon, \Lambda 
  c) Random initial Perturbations \\*
  d) Dissipation and Saturation \\*
  
-Note: Accretional ejection instability (AEI), as suggested by \cite{Caunt2011}, gives the same angular momentum transport needed as compared to the global MRI but the instability requires a fairly strong magnetic field. So need an external source, possibly from MRI.
+Note: Accretional ejection instability (AEI), as suggested by \cite{Caunt2011},
+gives the same angular momentum transport needed as compared to the global MRI
+but the instability requires a fairly strong magnetic field. So need an 
+external source, possibly from MRI.
 
 
 
