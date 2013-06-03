@@ -71,32 +71,34 @@ Also outline what the report will cover (probably as the last paragraph).
 %--------------------------------------------------
 \section{Physical Explanation}
 
+
 %
 % CONDUCTING FLUID
 %
 \subsection{Perfectly conducting fluid in magnetic field}
 
-When fluid can conduct electricity with negligible resistivity, the fluid is 
-tied to magnetic fields threading itself. We can combine Ohm's Law in ideal 
+The magnetic field lines are tied to the conducting fluid in which they are embedded.
+We can show this by comparing a transport equation of magnetic field with a equation for a line element moving with fluid. 
+We first combine Ohm's Law in ideal 
 conductor and Faraday's equation to get a transport equation for magnetic 
 field,
 \begin{align}
-    \frac{\partial \mathbf{B}}{\partial t} = \del \times (\mathbf{u}\times \mathbf{B}).
+    \frac{\partial \mathbf{B}}{\partial t} &= \del \times (\mathbf{u}\times \mathbf{B}) \nonumber \\
+    &=\mathbf{B}\cdot\del \mathbf{u} - {\mathbf{u}\cdot\del}\mathbf{B} -\mathbf{B}\del\cdot\mathbf{u}.
 \end{align}
-
 Assuming incompressibility, we get,
 \begin{align}
     \frac{D \mathbf{B}}{D t} = (\mathbf{B}\cdot \del) \mathbf{u},
 \end{align}
 where $\frac{D}{Dt}$ is the convective derivative $\frac{D}{Dt}=\frac{\partial}{\partial t}+(\mathbf{u}\cdot\del)$.
 
-Considering short line element $d\mathbf{l}$ moving with fluid, we can express 
+Considering a short line element $d\mathbf{l}$ moving with fluid, we can express 
 the rate of change of $d\mathbf{l}$ as
 \begin{align}
     \frac{D}{Dt}\left(d\mathbf{l}\right) = \mathbf{u}(\mathbf{x}+d\mathbf{l})-\mathbf{u}(\mathbf{x})=(d\mathbf{l}\cdot\del)\mathbf{u}.
 \end{align}
 Comparing two equations above, we can conclude that $\mathbf{B}$ and 
-$d\mathbf{l}$ obey the same equation [\cite{Davidson2001}]. Therefore, the 
+$d\mathbf{l}$ obey the same equation \cite[see][]{Davidson2001}. Therefore, the 
 field lines are frozen into the fluid.
 
 
@@ -127,13 +129,46 @@ displacement per unit density $\rho$ is
 \begin{align}
     \frac{(\mathbf{B}\cdot\del)\delta \mathbf{B}}{\mu \rho}=\frac{ikB\delta \mathbf{B}}{\mu \rho} = -\frac{k^2 B^2}{\mu\rho} \boldsymbol{\xi} = -K \boldsymbol{\xi},
 \end{align}
-where $K$ is analogous to a spring constant \citep[see][]{Wiki:MRI}. The 
+where $K$ is comparable to the spring constant \cite[see][]{Wiki:MRI,Balbus1998}. The 
 equation has same form of Hooke's Law for a spring.
+
 
 %
 % MRI
 %
 \subsection{Magnetoroational instability}
+Consider Keplerian motion of conducting fluid orbiting around a central body of mass $M_c$.
+Two adjacent fluid elements $m_i$ and $m_o$ at radial position $r_i$ and $r_o$ are orbiting around gravitational center with angular velocity $\Omega_i=\sqrt{\frac{GM_c}{r_i^{3}}}$ and $\Omega_o=\sqrt{\frac{GM_c}{r_o^{3}}}$ respectively. Therefore the angular velocity of the inner element is higher than that of the outer elements $\left(\frac{d \Omega^2}{dr}<0\right)$, but the angular momentum of the inner element is smaller than that of the outer element $\left(\frac{d r^4\Omega^2}{dr}>0\right)$.
+
+If a magnetic field line is connecting the conducting fluid elements, the magnetic field will move together with the two elements. Because of the velocity shear in Keplerian motion, the magnetic field will be stretched and bent. Therefore the magnetic field will exert restoring force on the fluid element making the inner element pulled back and the outer element dragged forward. The inner element lose angular momentum, therefore it must fall to an orbit of smaller radius. On the other hand the outer element gains angular momentum and moves to the orbit of larger radius. This outward angular momentum transport makes the small initial displacement get larger. The magnetic fields are stretched even more and gives positive feedback leading the system unstable. This instability is known as a magnetorotational instability (MRI) and is illustrated in Figure \ref{fig:mri}.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.35\textwidth]{Balbus2009_diagram}
+        \caption{A schematic diagram from \cite{Balbus2009} showing magnetorotational instability. Two fluid elements $m_i$ (inner) and $m_o$ (outer) orbit a mass ($M_C$) with the magnetic tension between the two elements represented by a spring. Over time $m_i$ loses angular momentum, moving closer to $M_C$ while $m_o$ gains angular momentum and moves away from $M_C$.}
+        \label{fig:mri}
+\end{figure}
+
+One can show that the dispersion relation for the incompressible ideal flow rotating with angular velocity $\Omega_0$ is
+\begin{align}
+    \omega^4-\left[2\left(k^2 V_A^2\right) +\kappa^2\right]\omega^2 +\left(k^2 V_A^2\right)\left[\left(k^2 V_A^2\right)+r\frac{d \Omega^2}{dr}\right]=0,
+\end{align}
+where $\omega$ and $k$ are angular frequency and wave number of a perturbation $\xi \propto e^{i(k z+\omega t)}$. $V_A=\frac{B}{\sqrt{\mu \rho}}$ is Alfv\'en speed for the imposed magnetic field $B$. $\kappa^2$ is known as epicylic frequency $\left(\kappa^2=4\Omega_0^2 + r \frac{d \Omega^2}{dr}\right)$ \citep[see][]{Balbus1991,Balbus1998,Balbus2003}. If $\frac{d \Omega^2}{dr}<0$, then one of $\omega^2$ has negative root for long wave length modes satisfying
+\begin{align}
+    k^2 < -\frac{r}{V_A^2}\frac{d\Omega^2}{dr}.
+\end{align}
+
+Therefore, the instability criterion for the magnetorotational instability (MRI) is represented as radially decreasing angular velocity,
+\begin{align}
+    \frac{d \Omega^2}{dr}<0 \quad \text{(UNSTABLE)}
+\end{align} 
+
+Note that the MRI is different from the conventional hydrodynamic instability known as Couette-Taylor centrifugal instability \cite[see][]{Charru2011}. The Couette-Taylor centrifugal instability criterion for axsymmetric perturbation is represented as radially decreasing angular momentum,
+\begin{align}
+    \frac{d r^4 \Omega^2}{dr} <0 \quad \text{(UNSTABLE)}
+\end{align}
+
+The Keplerian disk is a good example of flows which are stable to the hydrodynamic instability but unstable to the MRI.
 
 
 
@@ -147,7 +182,7 @@ equation has same form of Hooke's Law for a spring.
 of rotating magneto-fluid bounded in coaxial cylinder. For the case of gaseous 
 astrophysical disks in unbounded geometry was shown in \cite{Balbus1991}. The 
 condition for stability was shown to be radially increasing angular velocity 
-profile. We present a linear stability analysis of MRI for bounded case 
+profile. We present a linear stability analysis of MRI for radially bounded case 
 following \cite{Acheson1972}, \cite{Acheson1973a}, \cite{Knobloch1992}, and 
 \cite{Julien2010}.
 
@@ -159,16 +194,18 @@ following \cite{Acheson1972}, \cite{Acheson1973a}, \cite{Knobloch1992}, and
 
 The wave dispersion equation of a cylindrical magneto-fluid can be obtained 
 from the magnetohydrodynamic (MHD) equations. Assuming the fluid is inviscid 
-and perfectly conducting, the ideal MHD equations are
+and perfectly conducting, the ideal MHD equations are 
 \begin{align}
     \rho\left(\frac{\partial\mathbf{u}}{\partial t}+\mathbf{u}\cdot\del\mathbf{u}\right) &= -\del p +\mathbf{J}\times\mathbf{B} \\
     \frac{\partial \rho}{\partial t} + \del\cdot(\rho \mathbf{u})&=0 \\
+    \frac{d}{dt}\left(\frac{p}{\rho^\gamma}\right)&=0\\
     \mathbf{E}+\mathbf{u}\times\mathbf{B}&=0 \\
     \del\times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-    \del \times \mathbf{B} &= \mu \mathbf{J}.
+    \del \times \mathbf{B} &= \mu \mathbf{J},
 \end{align}
+where $\mathbf{u}$ fluid velocity, $\rho$ is fluid denstity, $p$ is pressure. $d/dt=\partial/\partial t +\mathbf{u}\cdot\del$ is convective derivative and $\gamma$ is the ratio of specific heats. $\mathbf{E}$, $\mathbf{B}$ and $\mathbf{J}$ are electic field, magnetic field and current density respectively \cite[see][]{Freidberg1987}.
 
-To investigate MRI, one can consider homogeneous incompressible fluid rotating 
+To investigate the magnetorotational instability, one can consider homogeneous incompressible fluid rotating 
 with angular velocity $\Omega(r)=\frac{V(r)}{r}$ in externally imposed magnetic 
 fields $\mathbf{B}_0 = [0,B_\phi(r),B_z(r)]$. Combining electromagnetic 
 equations with momentum relation, we get the appropriate MHD equations,
@@ -176,7 +213,7 @@ equations with momentum relation, we get the appropriate MHD equations,
     \frac{\partial \mathbf{u}}{\partial t}+(\mathbf{u}\cdot\del)\mathbf{u} &= -\frac{1}{\rho}\del\left(P+\frac{\mathbf{B}^2}{2\mu}\right)+\frac{1}{\mu\rho}(\mathbf{B}\cdot\del)\mathbf{B}\\
     \frac{\partial \mathbf{B}}{\partial t} +(\mathbf{u}\cdot\del)\mathbf{B} &=(\mathbf{B}\cdot\del)\mathbf{u} \\
     \del\cdot\mathbf{u}&=0\\
-    \del \cdot \mathbf{B} &=0
+    \del \cdot \mathbf{B} &=0.
 \end{align}
 
 
@@ -193,22 +230,30 @@ of $\mathbf{u_1}$ and $\mathbf{b_1}$ for velocity and magnetic fields.
 %\del\cdot \mathbf{u}_1&=0\\
 %\del \cdot \mathbf{B}_1 &=0
 %\end{align}
-The axisymmetric perturbation is assumed to have the form
+The linear perturbation is assumed to have the form
 \begin{align}
-    \psi=\Re\left[\hat{\psi}(r)e^{i(kz-\omega t)} \right].
-    \end{align}
-    Accoring to \cite{Acheson1972}, the normal mode equations are
-    \begin{align}
-    -i\omega\hat{b}_r&= ikB_z \hat{u}_r\\
-    -i\omega\hat{b}_\phi &= -\frac{d}{dr}(\hat{u}_r B_\phi) +ik(\hat{u}_\phi B_z -\hat{u}_z B_\phi)\\
-    -i\omega \hat{b}_z &= -\frac{1}{r}\frac{d}{dr} (r\hat{u}_r B_z)\\
-    ik\hat{u}_z &= -\frac{1}{r}\frac{d}{dr}(r \hat{u}_r)\\
-    i{(\omega^2-k^2 V_{Az}^2)}\hat{u}_\phi &= \frac{\hat{u}_r}{r}(2\Omega r \omega +2k V_{A\phi}V_{Az})
+    f=\Re\left[\hat{f}(r)e^{i(m\phi+kz+\omega t)} \right].
 \end{align}
+Accoring to \cite{Acheson1972}, the normal mode equations are
+\begin{align}
+\hat{b}_r &=\frac{\hat{u}_r}{\omega}\left(k B_z +\frac{m B_\phi}{r}\right),\\
+\hat{b}_\phi &= -\frac{(\hat{u}_r B_\phi)'}{i\omega} +\frac{k}{\omega}(\hat{u}_\phi B_z -\hat{u_z}B_\phi),\\
+\hat{b}_z &= -\frac{(r\hat{u}_r B_z)'}{ri\omega} - \frac{m(\hat{u_\phi} B_z - \hat{u}_z B_\phi)}{r\omega},\\
+\hat{u}_z &= -\frac{(r\hat{u}_r)'}{rik}-\frac{m\hat{u}_\phi}{rk},\\
+\left(1+\frac{m^2}{r^2k^2}\right)ri\hat{u}_\phi &= -\frac{m}{rk^2}(r\hat{u}_r)' \nonumber \\ &-\frac{\hat{u}_r}{\left(V_{Az}+\frac{m V_{A\phi}}{rk}\right)^2\frac{k^2}{\omega^2}-1}
+\left\{-\frac{2\Omega r}{\omega}+\frac{2kV_{A\phi}}{\omega^2}\left(V_{Az}+\frac{mV_{A\phi}}{rk}\right)\right\},
+\end{align}
+%\begin{align}
+%    -i\omega\hat{b}_r&= ikB_z \hat{u}_r\\
+%    -i\omega\hat{b}_\phi &= -\frac{d}{dr}(\hat{u}_r B_\phi) +ik(\hat{u}_\phi B_z -\hat{u}_z B_\phi)\\
+%    -i\omega \hat{b}_z &= -\frac{1}{r}\frac{d}{dr} (r\hat{u}_r B_z)\\
+%    ik\hat{u}_z &= -\frac{1}{r}\frac{d}{dr}(r \hat{u}_r)\\
+%    i{(\omega^2-k^2 V_{Az}^2)}\hat{u}_\phi &= %\frac{\hat{u}_r}{r}(2\Omega r \omega +2k V_{A\phi}V_{Az})
+%\end{align}
 where $V_{A\phi}=\frac{B_\phi (r)}{\sqrt{\mu\rho}}$, $V_{Az}=\frac{B_z (r)}{\sqrt{\mu\rho}}$ are Alfv\'en speeds for associated external magnetic field components.
 
 Solving the normal mode equation set for radial velocity perturbation 
-$\hat{u}_r = u$, \cite{Acheson1973a} obtained following eigenvalue problem,
+$\hat{u}_r = u$ and considering axisymmetric perturbation $(m=0)$, \cite{Acheson1973a} obtained following eigenvalue problem,
 \begin{align}
     \frac{d}{dr}\left[(\omega^2-k^2 V_{Az}^2)\left(\frac{du}{dr}+\frac{u}{r}\right)\right]-k^2\left[\omega^2-k^2 V_{Az}^2+r\frac{d}{dr}\left(\frac{V_{A\phi}^2}{r^2}-\frac{V^2}{r^2}\right)\right]u \nonumber \\
     = -\frac{4 k^2}{r^2}\frac{(k V_{A\phi} V_{Az}+\omega V)^2}{(\omega^2-k^2 V_{Az}^2)} u.
@@ -269,9 +314,8 @@ Considering the imaginary part of the equation, we have
     \int_{r_1}^{r_2} \frac{1}{r}V_\phi V |u|^2 dr =0
 \end{align}
 
-\cite{Knobloch1992} shows exponentially growing instability is only possible 
+\cite{Knobloch1992} showed that exponentially growing instability is only possible 
 when $V_{A\phi}$ or $V$ changes sign somewhere in $r_1< r < r_2$.
-
 
 
 %--------------------------------------------------
