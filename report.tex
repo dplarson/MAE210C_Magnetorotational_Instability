@@ -158,15 +158,15 @@ equation has same form of Hooke's Law for a spring.
 % MRI
 %
 \subsection{Magnetoroational instability}
-Consider Keplerian motion of conducting fluid orbiting around a central body of mass $M_c$.
+We present a relatively simple physical explanation of the magnetorotational instability from \cite{Balbus2011}. Consider Keplerian motion of conducting fluid orbiting around a central body of mass $M_c$.
 Two adjacent fluid elements $m_i$ and $m_o$ at radial position $r_i$ and $r_o$ are orbiting around gravitational center with angular velocity $\Omega_i=\sqrt{\frac{GM_c}{r_i^{3}}}$ and $\Omega_o=\sqrt{\frac{GM_c}{r_o^{3}}}$ respectively. Therefore the angular velocity of the inner element is higher than that of the outer elements $\left(\frac{d \Omega^2}{dr}<0\right)$, but the angular momentum of the inner element is smaller than that of the outer element $\left(\frac{d r^4\Omega^2}{dr}>0\right)$.
 
-If a magnetic field line is connecting the conducting fluid elements, the magnetic field will move together with the two elements. Because of the velocity shear in Keplerian motion, the magnetic field will be stretched and bent. Therefore the magnetic field will exert restoring force on the fluid element making the inner element pulled back and the outer element dragged forward. The inner element lose angular momentum, therefore it must fall to an orbit of smaller radius. On the other hand the outer element gains angular momentum and moves to the orbit of larger radius. This outward angular momentum transport makes the small initial displacement get larger. The magnetic fields are stretched even more and gives positive feedback leading the system unstable. This instability is known as a magnetorotational instability (MRI) and is illustrated in Figure \ref{fig:mri}.
+If a magnetic field line is connecting the conducting fluid elements, the magnetic field will move together with the two elements. Because of the velocity shear in Keplerian motion, the magnetic field will be stretched and bent. Therefore the magnetic field will exert restoring force on the fluid element making the inner element pulled back and the outer element dragged forward. The inner element lose angular momentum, therefore it must fall to an orbit of smaller radius. On the other hand the outer element gains angular momentum and moves to the orbit of larger radius \cite[see][]{Balbus2011,Wiki:MRI}. This outward angular momentum transport makes the small initial displacement get larger. The magnetic fields are stretched even more and gives positive feedback leading the system unstable. This instability is known as a magnetorotational instability (MRI) and is illustrated in Figure \ref{fig:mri}.
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.35\textwidth]{Balbus2009_diagram}
-        \caption{A schematic diagram from \cite{Balbus2009} showing magnetorotational instability. Two fluid elements $m_i$ (inner) and $m_o$ (outer) orbit a mass ($M_C$) with the magnetic tension between the two elements represented by a spring. Over time $m_i$ loses angular momentum, moving closer to $M_C$ while $m_o$ gains angular momentum and moves away from $M_C$.}
+        \caption{A schematic diagram from \cite{Balbus2011} showing magnetorotational instability. Two fluid elements $m_i$ (inner) and $m_o$ (outer) orbit a mass ($M_C$) with the magnetic tension between the two elements represented by a spring. Over time $m_i$ loses angular momentum, moving closer to $M_C$ while $m_o$ gains angular momentum and moves away from $M_C$.}
         \label{fig:mri}
 \end{figure}
 
@@ -184,7 +184,7 @@ Therefore, the instability criterion for the magnetorotational instability (MRI)
     \frac{d \Omega^2}{dr}<0 \quad \text{(UNSTABLE)}
 \end{align} 
 
-Note that the MRI is different from the conventional hydrodynamic instability known as Couette-Taylor centrifugal instability \cite[see][]{Charru2011}. The Couette-Taylor centrifugal instability criterion for axsymmetric perturbation is represented as radially decreasing angular momentum,
+Note that the MRI is different from the conventional hydrodynamic instability known as Couette-Taylor centrifugal instability. The Couette-Taylor centrifugal instability criterion for axsymmetric perturbation is represented as radially decreasing angular momentum \cite[see][]{Charru2011},
 \begin{align}
     \frac{d r^4 \Omega^2}{dr} <0 \quad \text{(UNSTABLE)}
 \end{align}
