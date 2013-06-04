@@ -47,8 +47,9 @@
 % ABSTRACT
 %--------------------------------------------------
 \begin{abstract}
-We review current research on magneotorotational instability (MRI) and its role
-as a transport mechanism of angular momentum in accretion disks.
+We review magnetorotational instability and its role in transporting angular 
+momentum within accretion disks. Theoretical, experimental and numerical simulation
+research work is surveyed.
 \end{abstract}
 
 
@@ -174,7 +175,18 @@ $\left(d \Omega^2 / dr < 0 \right)$, but the angular momentum of the inner
 element is smaller than that of the outer element 
 $\left(d r^4\Omega^2 / dr > 0 \right)$.
 
-If a magnetic field line is connecting the conducting fluid elements, the magnetic field will move together with the two elements. Because of the velocity shear in Keplerian motion, the magnetic field will be stretched and bent. Therefore the magnetic field will exert restoring force on the fluid element making the inner element pulled back and the outer element dragged forward. The inner element lose angular momentum, therefore it must fall to an orbit of smaller radius. On the other hand the outer element gains angular momentum and moves to the orbit of larger radius \cite[see][]{Balbus2011,Wiki:MRI}. This outward angular momentum transport makes the small initial displacement get larger. The magnetic fields are stretched even more and gives positive feedback leading the system unstable. This instability is known as a magnetorotational instability (MRI) and is illustrated in Figure \ref{fig:mri}.
+If a magnetic field line is connecting the conducting fluid elements, the 
+magnetic field will move together with the two elements. Because of the velocity
+shear in Keplerian motion, the magnetic field will be stretched and bent. 
+Therefore the magnetic field will exert restoring force on the fluid element 
+making the inner element pulled back and the outer element dragged forward. 
+The inner element lose angular momentum, therefore it must fall to an orbit of
+smaller radius. On the other hand the outer element gains angular momentum and
+moves to the orbit of larger radius \cite[see][]{Balbus2011,Wiki:MRI}. This 
+outward angular momentum transport makes the small initial displacement get 
+larger. The magnetic fields are stretched even more and gives positive feedback
+leading the system unstable. This instability is known as a magnetorotational 
+instability (MRI) and is illustrated in Figure \ref{fig:mri}.
 
 \begin{figure}[t]
     \centering
@@ -183,30 +195,41 @@ If a magnetic field line is connecting the conducting fluid elements, the magnet
         \label{fig:mri}
 \end{figure}
 
-One can show that the dispersion relation for the incompressible ideal flow rotating with angular velocity $\Omega_0$ is
+One can show that the dispersion relation for the incompressible ideal flow 
+rotating with angular velocity $\Omega_0$ is
 \begin{align}
     \omega^4-\left[2\left(k^2 V_A^2\right) +\kappa^2\right]\omega^2 +\left(k^2 V_A^2\right)\left[\left(k^2 V_A^2\right)+r\frac{d \Omega^2}{dr}\right]=0,
 \end{align}
-where $\omega$ and $k$ are angular frequency and wave number of a perturbation $\xi \propto e^{i(k z+\omega t)}$, $V_A = B / \sqrt{\mu \rho}$ is Alfv\'en speed for the imposed magnetic field $B$, and $\kappa^2$ is the epicylic frequency, defined as
+where $\omega$ and $k$ are angular frequency and wave number of a perturbation
+$\xi \propto e^{i(k z+\omega t)}$, $V_A = B / \sqrt{\mu \rho}$ is Alfv\'en speed
+for the imposed magnetic field $B$, and $\kappa^2$ is the epicylic frequency, 
+defined as
 \begin{align}
     \kappa^2=4\Omega_0^2 + r \frac{d \Omega^2}{dr}
 \end{align}
-See \cite{Balbus1991,Balbus1998,Balbus2003} for more details. If $d \Omega^2 / dr < 0$, then one of $\omega^2$ has negative root for long wave length modes satisfying
+See \cite{Balbus1991,Balbus1998,Balbus2003} for more details. If 
+$d \Omega^2 / dr < 0$, then one of $\omega^2$ has negative root for long wave 
+length modes satisfying
 \begin{align}
     k^2 < -\frac{r}{V_A^2}\frac{d\Omega^2}{dr}.
 \end{align}
 
-Therefore, the instability criterion for the magnetorotational instability (MRI) is represented as radially decreasing angular velocity,
+Therefore, the instability criterion for the magnetorotational instability (MRI)
+is represented as radially decreasing angular velocity,
 \begin{align}
     \frac{d \Omega^2}{dr}<0 \quad \text{(UNSTABLE)}
 \end{align} 
 
-Note that the MRI is different from the conventional hydrodynamic instability known as Couette-Taylor centrifugal instability. The Couette-Taylor centrifugal instability criterion for axsymmetric perturbation is represented as radially decreasing angular momentum \cite[see][]{Charru2011}:
+Note that the MRI is different from the conventional hydrodynamic instability 
+known as Couette-Taylor centrifugal instability. The Couette-Taylor centrifugal
+instability criterion for axsymmetric perturbation is represented as radially 
+decreasing angular momentum \cite[see][]{Charru2011}:
 \begin{align}
     \frac{d r^4 \Omega^2}{dr} <0 \quad \text{(UNSTABLE)}
 \end{align}
 
-The Keplerian disk is a good example of flows which are stable to the hydrodynamic instability but unstable to the MRI.
+The Keplerian disk is a good example of flows which are stable to the 
+hydrodynamic instability but unstable to the MRI.
 
 
 
