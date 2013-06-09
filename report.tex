@@ -67,11 +67,21 @@ importance of MRI, we have to look into the accretion disk theory where many
 astrophysical phenomena take place in.
 
 Accretion disks are disk made up of gas, dust, and plasma that rotates around
-and gradually collapses onto an object in the center, e.g leading to formation
-of a star. However, accretion can happen only with an efficient mechanism for
-rapidly transporting angular momemtum outwards \cite{Julien2010}. It was
-suggested that turbulence drives angular momentum outwards but there was no
-known mechanism that would generate turbulence. 
+and gradually collapses onto an object in the center, e.g., leading to the
+formation of a star (see Figure \ref{fig:accretion_disk} for a visualization).
+However, accretion can happen only with an efficient mechanism for rapidly
+transporting angular momemtum outwards \cite{Julien2010}. It was suggested that
+turbulence drives angular momentum outwards but there was no known mechanism
+that would generate turbulence. 
+
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.35\textwidth]{accretion_disk}
+        \caption{Artist's illustration of an accretion disk in a binary system. Taken from \url{http://apod.nasa.gov/apod/ap991219.html}.}
+        \label{fig:accretion_disk}
+\end{figure}
+
 
 These Keplerian disks satisfies the Rayleigh stability criterion
 \citep[see][]{Rayleigh1916} against centrifugal instability.  Thus, there has
@@ -495,13 +505,32 @@ fundamental to the instability \cite{Balbus1991} with some exceptions
 \cite{Sano1998}. 
 
 We begin with the widely used local shearing box model \cite{Balbus1991} which
-has special properties of the model equations that makes it easier to simulate.
-The special properties are that the toroidal field drops out, there is no
-distinction between inward and outward directions (symmetry) and MRI becomes an
-exponentially growing instability, which is what is needed \cite{Julien2010}. 
+has special properties of the model equations that makes it easier to simulate
+(see Figure \ref{fig:shearbox}). The special properties are that the toroidal
+field drops out, there is no distinction between inward and outward directions
+(symmetry) and MRI becomes an exponentially growing instability, which is what
+is needed \cite{Julien2010}. 
+
+
+\begin{figure}
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{shearbox1}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{shearbox2}
+        \end{center}
+    \end{minipage}
+    \caption{Diagram (left) and boundary conditions (right) of the shearing box model from \cite{Balbus1991}.}.
+    \label{fig:shearbox}
+\end{figure}
+
 
 Periodic boundary conditions were used with an added shearing component to the
-radial direction. " Method of characteristics-constrained transport" algorithm
+radial direction. ``Method of characteristics-constrained transport'' algorithm
 as explained in \cite{Hawley1995} was implemented. This model with an initial
 input magnetic field with zero- volume average initiates MRI but may obliterate
 the magnetic field and thus suppress the turbulence. 
@@ -555,9 +584,18 @@ and overestimate the efficiency of angular momentum extraction by MRI.
 Shakura-Sunyaev number and the possible decline of the angular momentum
 transport rate with decreasing Pm. Even though the shearing box model is
 restrictive in resolving the behavior of the accretion disk, it is nonetheless
-useful in obtaining actual evidence for MRI \cite{Balbus1998} and understanding
-the dynamo process that sustains the magnetic field in planetary systems
-\cite{Lesur2008}.
+useful in obtaining actual evidence for MRI \cite{Balbus1998} (see Figure
+\ref{fig:Balbus1998}) and understanding the dynamo process that sustains the
+magnetic field in planetary systems \cite{Lesur2008}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.50\textwidth]{Balbus1998}
+    \caption{Numerical results from \cite{Balbus1998} showing the temporal evolution of MRI. The snapshots are ($R, z$) cross-sections of field lines, with the origin at the bottom left, and the time in number of orbits annotated to each snapshot.}
+    \label{fig:Balbus1998}
+\end{figure}
+
 
 \cite{Kirillov2012} presents a unifying description of the helical and
 azimuthal versions of MRI, and they also identify the universal character of
