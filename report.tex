@@ -514,24 +514,6 @@ field drops out, there is no distinction between inward and outward directions
 (symmetry) and MRI becomes an exponentially growing instability, which is what
 is needed \cite{Julien2010}. 
 
-
-\begin{figure}
-    \begin{minipage}[t]{0.5\textwidth}
-        \begin{center}
-            \includegraphics[width=0.95\textwidth]{shearbox1}
-        \end{center}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.5\textwidth}
-        \begin{center}
-            \includegraphics[width=0.95\textwidth]{shearbox2}
-        \end{center}
-    \end{minipage}
-    \caption{Diagram (left) and boundary conditions (right) of the shearing box model from \cite{Balbus1991}.}.
-    \label{fig:shearbox}
-\end{figure}
-
-
 Periodic boundary conditions were used with an added shearing component to the
 radial direction. ``Method of characteristics-constrained transport'' algorithm
 as explained in \cite{Hawley1995} was implemented. This model with an initial
@@ -550,9 +532,27 @@ transport needed even when the initial conditions had strong turbulence
 structures. Their 3D results suggest that accretion disks are well described by
 Euler's, ignoring the viscous terms from Navier Stokes \cite{Hawley1995}.
 
+
+\begin{figure}
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{shearbox1}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{shearbox2}
+        \end{center}
+    \end{minipage}
+    \caption{Diagram (left) and boundary conditions (right) of the shearing box model from \cite{Balbus1991}.}.
+    \label{fig:shearbox}
+\end{figure}
+
+
 There are many variations of numerical simulations using the local shearing box
-model with results worth learning from.  \citep{Fromang&Papaloizou2007,
-    Fromang2007} have shown that numerical results using the box model with
+model with results worth learning from. \cite{Fromang&Papaloizou2007} and
+\cite{Fromang2007} have shown that numerical results using the box model with
 zero net flux are highly dependent on the numerical method used and resolution
 of the grid unless explicit diffusion coefficients and the appropriate
 dissipative scales are resolved . This issue has been considered in
