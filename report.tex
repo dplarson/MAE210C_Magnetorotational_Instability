@@ -69,19 +69,29 @@ astrophysical phenomena take place in.
 Accretion disks are disk made up of gas, dust, and plasma that rotates around
 and gradually collapses onto an object in the center, e.g leading to formation
 of a star. However, accretion can happen only with an efficient mechanism for
-rapidly transporting angular momemtum outwards. It was suggested that
-turbulence drives angular momentum outwards but there was no known mechanism
-that would generate turbulence. These Keplerian disks satisfies the Rayleigh
-stability criterion \citep[see][]{Rayleigh1916} against centrifugal
-instability.  Thus, there has to be other mechanisms that generates turbulence
-and this is where MRI and non-linear hydrodynamic instablities comes into the
-picture. There has been other mechanisms suggested but MRI seem like the most
-probable explanation at this point.
+rapidly transporting angular momemtum outwards \cite{Julien2010}. It was
+suggested that turbulence drives angular momentum outwards but there was no
+known mechanism that would generate turbulence. 
+
+These Keplerian disks satisfies the Rayleigh stability criterion
+\citep[see][]{Rayleigh1916} against centrifugal instability.  Thus, there has
+to be other mechanisms that generates turbulence. Many instabilities such as
+barotropic  \cite{Dubrulle2005b} and finite amplitude shear instabilities
+\cite{Dubrulle2005a}, \cite{Lesur2005} etc have been suggested but none of them
+are sufficient for the angular momentum transport outward required
+\cite{Ji2006}. Magnetic field-induced instabilities MRI seem to be the most
+promising. 
+
+MRI is a linear instability that is triggered by weak poloidal magnetic field.
+It is axisymmetric and occurs in Rayleigh-stable regime where the angular
+velocity decreases outwards, which is the case for the accretion we are
+interested in. The efficiency of angular momentum transport depends on the
+saturation of MRI \cite{Balbus1991}, \cite{Balbus1998}.
 
 MRI is not only applicable to astrophysical phenomena but geophysical ones as
-well, e.g. the Earth's magnetic field. It is used to better understand how
-planetary magnetic field might  have formed on Earth or other planets and how
-and why the field is sustained or decayed through time.
+well, e.g. the Earth's magnetic field \cite{Petitdemange2008}. It is used to
+better understand how planetary magnetic field might  have formed on Earth or
+other planets and how the field is sustained or decayed through time.
 
 In this report, we attempt to explain and illustrate the instability in an
 astrophysical sense and go through what has been done experimentally and
@@ -93,7 +103,6 @@ numerically in terms of MRI.
 % PHYSICAL EXPLANATION
 %--------------------------------------------------
 \section{Physical Explanation}
-
 
 %
 % CONDUCTING FLUID
@@ -473,56 +482,70 @@ Generation of HMRI has since been experimentally proven by the PROMISE experimen
 %--------------------------------------------------
 \section{Numerical Work}
 
-On top of experiments mentioned in the 
-previous section, numerical simulations  are also employed to try to explain the anomalous viscosity 
-and magnetic field generation. Direct numerical simulations (DNS) are typically
-used with the advance of supercomputers and dramatically decreased computing 
-time. DNS of the magnetohydrodynamics (MHD) Navier Stokes equations have had 
-much success in the determination of the existence of MRI. Many of the numerical
-simulations assume axisymmetric, vertically global and incompressible flow if Alfven speed slower than sound speed
-as occurs in that regime that is stable to Taylor-Couette, the MHD equations can be simplified to be incompressible 
-since it is not fundamental to the instability \cite{Balbus1991} with some exceptions \cite{Sano1998}. 
+On top of experiments mentioned in the previous section, numerical simulations
+are also employed to try to explain the anomalous viscosity and magnetic field
+generation. Direct numerical simulations (DNS) are typically used with the
+advance of supercomputers and dramatically decreased computing time. DNS of the
+magnetohydrodynamics (MHD) Navier Stokes equations have had much success in the
+determination of the existence of MRI. Many of the numerical simulations assume
+axisymmetric, vertically global and incompressible flow if Alfven speed slower
+than sound speed as occurs in that regime that is stable to Taylor-Couette, the
+MHD equations can be simplified to be incompressible since it is not
+fundamental to the instability \cite{Balbus1991} with some exceptions
+\cite{Sano1998}. 
 
-We begin with the widely used local shearing box model \cite{Balbus1991} which has special properties of the model equations that makes it easier to simulate. The special properties are that the toroidal field drops out, there is no distinction between inward and outward directions (symmetry) and MRI becomes an exponentially growing instability, which is what is needed \cite{Julien2010}. 
+We begin with the widely used local shearing box model \cite{Balbus1991} which
+has special properties of the model equations that makes it easier to simulate.
+The special properties are that the toroidal field drops out, there is no
+distinction between inward and outward directions (symmetry) and MRI becomes an
+exponentially growing instability, which is what is needed \cite{Julien2010}. 
 
-Periodic boundary conditions were used with an added shearing
-component to the radial direction. " Method of characteristics-constrained
-transport" algorithm as explained in \cite{Hawley1995} was implemented. This
-model with an initial input magnetic field with zero- volume average initiates
-MRI but may obliterate the magnetic field and thus suppress the turbulence. 
+Periodic boundary conditions were used with an added shearing component to the
+radial direction. " Method of characteristics-constrained transport" algorithm
+as explained in \cite{Hawley1995} was implemented. This model with an initial
+input magnetic field with zero- volume average initiates MRI but may obliterate
+the magnetic field and thus suppress the turbulence. 
 
-The comparison of the 3D simulations results from \cite{Hawley1995} with the 2D results from
-\cite{Balbus1994} shows significant difference. The 2D results have a general
-channel/streaming flow solution whereas the 3D results may go through the
-channel flow but eventually evolves further into a turbulent flow with some not
-going through the channel flow at all. Vertical component of gravity,
-hence buoyancy, was ignored and since their simulations showed significant
-density contrast, the shearing box model is not self-consistent. Purely
-hydrodynamic turbulence did not give significant angular momentum transport
-needed even when the initial conditions had strong turbulence structures. Their
-3D results suggest that accretion disks are well described by Euler's, ignoring
-the viscous terms from Navier Stokes \cite{Hawley1995}.
+The comparison of the 3D simulations results from \cite{Hawley1995} with the 2D
+results from \cite{Balbus1994} shows significant difference. The 2D results
+have a general channel/streaming flow solution whereas the 3D results may go
+through the channel flow but eventually evolves further into a turbulent flow
+with some not going through the channel flow at all. Vertical component of
+gravity, hence buoyancy, was ignored and since their simulations showed
+significant density contrast, the shearing box model is not self-consistent.
+Purely hydrodynamic turbulence did not give significant angular momentum
+transport needed even when the initial conditions had strong turbulence
+structures. Their 3D results suggest that accretion disks are well described by
+Euler's, ignoring the viscous terms from Navier Stokes \cite{Hawley1995}.
 
-There are many variations of numerical simulations using the local shearing box model with results worth learning from.  \citep{Fromang&Papaloizou2007, Fromang2007} have shown that numerical results using the box model with zero net flux are highly dependent on the numerical method used and resolution of
-the grid unless explicit diffusion coefficients and the appropriate dissipative
-scales are resolved . This issue has been considered in \cite{Lesur2007} for cases with nonzero
-net vertical flux, where they found that both the viscosity and resistivity
-affect the amount of angular momentum transported by magnetohydrodynamic
-turbulence. 
+There are many variations of numerical simulations using the local shearing box
+model with results worth learning from.  \citep{Fromang&Papaloizou2007,
+    Fromang2007} have shown that numerical results using the box model with
+zero net flux are highly dependent on the numerical method used and resolution
+of the grid unless explicit diffusion coefficients and the appropriate
+dissipative scales are resolved . This issue has been considered in
+\cite{Lesur2007} for cases with nonzero net vertical flux, where they found
+that both the viscosity and resistivity affect the amount of angular momentum
+transported by magnetohydrodynamic turbulence. 
 
-\cite{Sano1998} has shown that whether saturation occurs depends on the Elsasser number $\Delta \equiv v^2_A/\eta \Omega$, which describes the relative balance of Lorentz forces to Coriolis forces. Non-axisymmetric numerical simulations done by \cite{Fleming2000} suggest
-saturation does occur even when Elsasser number $  \Delta \ge 1$ if
-non-axisymmetric disturbances are allowed to evolve. 
+\cite{Sano1998} has shown that whether saturation occurs depends on the
+Elsasser number $\Delta \equiv v^2_A/\eta \Omega$, which describes the relative
+balance of Lorentz forces to Coriolis forces. Non-axisymmetric numerical
+simulations done by \cite{Fleming2000} suggest saturation does occur even when
+Elsasser number $  \Delta \ge 1$ if non-axisymmetric disturbances are allowed
+to evolve. 
 
-Other variations of the shearing box models include vertically stratified disks as done in \cite{Miller1999}, who found that turbulent magnetised disk can produce a magnetised corona
-in laminar flow through MRI. \cite{Stone1996} presented a 3D MHD simulation of
-the nonlinear evolution of MRI in a local shearing box method with a global
-vertical direction and vertically stratified disk as well. They found that the
-instability generated and maintained MHD turbulence.
+Other variations of the shearing box models include vertically stratified disks
+as done in \cite{Miller1999}, who found that turbulent magnetised disk can
+produce a magnetised corona in laminar flow through MRI. \cite{Stone1996}
+presented a 3D MHD simulation of the nonlinear evolution of MRI in a local
+shearing box method with a global vertical direction and vertically stratified
+disk as well. They found that the instability generated and maintained MHD
+turbulence.
 
 The use of the shearing box model has its limitations as pointed out by
-\cite{Hawley1995} \cite{Regev2008} as they do not permit any dynamics involving the background
-shear, which is taken as imposed and constant in space and time
+\cite{Hawley1995} \cite{Regev2008} as they do not permit any dynamics involving
+the background shear, which is taken as imposed and constant in space and time
 \citep{Regev2008}. With regards to resolution which is tied in with the model
 used, the efficiency of angular momentum transport appears to decrease with
 improved resolution as shown by \cite{Fromang2007}, suggesting that transport
@@ -532,7 +555,8 @@ and overestimate the efficiency of angular momentum extraction by MRI.
 Shakura-Sunyaev number and the possible decline of the angular momentum
 transport rate with decreasing Pm. Even though the shearing box model is
 restrictive in resolving the behavior of the accretion disk, it is nonetheless
-useful in understanding the dynamo process that sustains the magnetic field
+useful in obtaining actual evidence for MRI \cite{Balbus1998} and understanding
+the dynamo process that sustains the magnetic field in planetary systems
 \cite{Lesur2008}.
 
 \cite{Kirillov2012} presents a unifying description of the helical and
@@ -543,8 +567,10 @@ instability will be governed by a mode with an azimuthal wavenumber that is
 proportional to the ratio of axial to azimuthal applied magnetic field, when
 this ratio becomes large and the Rossby number is close to the Liu limit)
 
-Apart from the local shearing box model, other 3D models have been implemented as well. \cite{Liu2008} simulated nonlinear development of MRI in a non-ideal magnetohydrodynamic Taylor-Couette flow (mimicking an
-on-going Princeton MRI experiment) using ZEUS-MP 2.0 code (\cite{Hayes2006}), which is a
+Apart from the local shearing box model, other 3D models have been implemented
+as well. \cite{Liu2008} simulated nonlinear development of MRI in a non-ideal
+magnetohydrodynamic Taylor-Couette flow (mimicking an on-going Princeton MRI
+experiment) using ZEUS-MP 2.0 code (\cite{Hayes2006}), which is a
 time-explicit, compressible, astrophysical ideal MHD parallel 3D code with
 added viscosity and resistivity for axisymmetric flows in cylindrical
 coordinates. He shows that the saturation of MRI causes a inflowing 'jet'
@@ -552,9 +578,18 @@ feature which is opposite to the usual Ekman circulation and enhances angular
 momentum transport radially outward, which is what is needed, agreeing with
 \cite{Hawley1995}. Stable MRI regime ($ Re \le 1600$) enhances vertical angular
 momentum transport while in unstable MRI regime ($Re \ge 3200$), MRI kicks in,
-resulting in more radial angular momentum transport as compared with vertical \cite{Liu2008}.
+resulting in more radial angular momentum transport as compared with vertical
+\cite{Liu2008}.
 
-Other general relativistic global 3D MHD codes have been implemented to show the existence of MRI but they are more geared toward black hole accretion \cite{Villiers2003},\cite{Koide2000}.
+Other general relativistic global 3D MHD codes have been implemented to show
+the existence of MRI and explore other astronomical phenomena
+\cite{Villiers2003},\cite{Koide2000}. \cite{Kersale2006} simulated global MRI
+to look more into the nonlinear properties and the formation of a jet that
+transports vertical magnetic flux. A 3D hydrodynamic simulations explores the
+nonlinear evolution of vertical shear instability in accretion disk and finds
+that vertical dependence destabilizes the disk, leading to velocity
+fluctuations that increases angular momentum transport \cite{Arlt2004},
+contrary to \cite{Hawley1995}.
 
 
 
