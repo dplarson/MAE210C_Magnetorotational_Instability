@@ -198,25 +198,25 @@ fluid orbiting around a central body of mass $M_c$.Two adjacent fluid elements
 $m_i$ and $m_o$, at radial position $r_i$ and $r_o$, are orbiting around 
 gravitational center with angular velocities $\Omega_i=\sqrt{GM_c / r_i^{3}}$ 
 and $\Omega_o=\sqrt{GM_c / r_o^{3}}$ respectively. Therefore the angular 
-velocity of the inner element is higher than that of the outer elements 
+velocity of the inner element is higher than that of the outer element 
 $\left(d \Omega^2 / dr < 0 \right)$, but the angular momentum of the inner 
 element is smaller than that of the outer element 
 $\left(d r^4\Omega^2 / dr > 0 \right)$.
 
-If a magnetic field line is connecting the conducting fluid elements, the 
-magnetic field will move together with the two elements. Because of the velocity
+If a magnetic field line connects the conducting fluid elements, the 
+magnetic field will move along with the two elements. Because of the velocity
 shear in Keplerian motion, the magnetic field will be stretched and bent. 
-Therefore the magnetic field will exert restoring force on the fluid element 
-making the inner element pulled back and the outer element dragged forward. 
-The inner element lose angular momentum, therefore it must fall to an orbit of
+Therefore the magnetic field will exert a restoring force on the fluid element, 
+pulling back the inner element and dragging the outer element forward. 
+The inner element loses angular momentum, therefore falling to an orbit of
 smaller radius. On the other hand the outer element gains angular momentum and
-moves to the orbit of larger radius \citep{Balbus2011}. This 
-outward angular momentum transport makes the small initial displacement get 
-larger. The magnetic fields are stretched even more and gives positive feedback
-leading the system unstable. This instability is known as a magnetorotational 
+moves to an orbit of larger radius \citep{Balbus2011}. This 
+outward angular momentum transport makes the small initial displacement 
+larger. The magnetic fields are further stretched, resulting in positive feedback
+ and making the system unstable. This instability is known as a magnetorotational 
 instability (MRI) and is illustrated in Figure \ref{fig:mri}.
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \includegraphics[width=0.35\textwidth]{Balbus2009_diagram}
         \caption{A schematic diagram from \cite{Balbus2011} showing magnetorotational instability. Two fluid elements $m_i$ (inner) and $m_o$ (outer) orbit a mass ($M_C$) with the magnetic tension between the two elements represented by a spring. Over time $m_i$ loses angular momentum, moving closer to $M_C$ while $m_o$ gains angular momentum and moves away from $M_C$.}
@@ -268,9 +268,9 @@ hydrodynamic instability but unstable to the MRI.
 \label{sec:theory}
 
 \cite{Acheson1973} and \cite{Knobloch1992} showed the linear stability analysis
-of rotating magneto-fluid bounded in coaxial cylinder. For the case of gaseous 
+of rotating magneto-fluid bounded in coaxial cylinder. The case of gaseous 
 astrophysical disks in unbounded geometry was shown in \cite{Balbus1991}. The 
-condition for stability was shown to be radially increasing angular velocity 
+condition for stability was shown to have a radially increasing angular velocity 
 profile. We present a linear stability analysis of MRI for radially bounded case 
 following \cite{Acheson1972}, \cite{Acheson1973a}, \cite{Knobloch1992}, and 
 \cite{Julien2010}.
@@ -413,9 +413,10 @@ Attempts to generate MRI in laboratory environments did not begin until 2001,
 four decades after the first magnetohydrodynamic (MHD) experiments
 \citep{Donnelly1960}. In contrast to MRI, the first MHD experiments focused on
 stabilizing, rather than generating, instabilities within Taylor-Couette flow
-using magnetic fields. Experiments aimed at generating MRI were not devised
-until the after published work indicating MRI's role as the transport mechanism
-of angular momentum within accretion disks \citep{Balbus1998}.
+using magnetic fields. Experiments aimed at generating MRI in flows relevant to
+accretion disks were not devised until after published work indicating MRI's
+role as the transport mechanism of angular momentum within accretion disks
+\citep{Balbus1991}.
 
 %
 % STANDARD
@@ -490,8 +491,7 @@ Generation of HMRI has since been experimentally proven by the PROMISE experimen
 \section{Numerical Work}
 
 On top of experiments mentioned in the previous section, numerical simulations
-are also employed to try to explain the anomalous viscosity and magnetic field
-generation. Direct numerical simulations (DNS) are typically used with the
+are also employed to explore MRI. Direct numerical simulations (DNS) are typically used with the
 advance of supercomputers and dramatically decreased computing time. DNS of the
 magnetohydrodynamics (MHD) Navier--Stokes equations have had much success in the
 determination of the existence of MRI. Many of the numerical simulations assume
@@ -503,10 +503,9 @@ fundamental to the instability \citep{Balbus1991} with some exceptions
 
 We begin with the widely used local shearing box model \citep{Balbus1991} which
 has special properties of the model equations that makes it easier to simulate
-(see Figure \ref{fig:shearbox}). The special properties are that the toroidal
+(see Figure \ref{fig:shearbox}). This model was also computationally more feasible at that time instead of a global 3D model. The special properties are that the toroidal
 field drops out, there is no distinction between inward and outward directions
-(symmetry) and MRI becomes an exponentially growing instability, which is what
-is needed \citep{Julien2010}. 
+(symmetry) and MRI becomes an exponentially growing instability \citep{Julien2010}. 
 
 Periodic boundary conditions were used with an added shearing component to the
 radial direction. ``Method of characteristics-constrained transport'' algorithm
@@ -524,7 +523,7 @@ significant density contrast, the shearing box model is not self-consistent.
 Purely hydrodynamic turbulence did not give significant angular momentum
 transport needed even when the initial conditions had strong turbulence
 structures. Their 3D results suggest that accretion disks are well described by
-Euler's, ignoring the viscous terms from Navier--Stokes \citep{Hawley1995}.
+Euler's, ignoring the viscous terms from Navier--Stokes \citep{Hawley1995}. They also note that saturation of MRI is important in the efficiency of the angular momentum transport.
 
 
 \begin{figure}
@@ -539,13 +538,14 @@ Euler's, ignoring the viscous terms from Navier--Stokes \citep{Hawley1995}.
             \includegraphics[width=0.95\textwidth]{shearbox2}
         \end{center}
     \end{minipage}
-    \caption{Diagram (left) and boundary conditions (right) of the shearing box model from \cite{Balbus1991}.}.
+    \caption{Diagram shows how the boxes shear in time (left) and boundary conditions (right) of the shearing box model from \cite{Balbus1991}.}.
     \label{fig:shearbox}
 \end{figure}
 
+A figure of numerical result using the shearing box model by \cite{Balbus1998} clearly showing MRI  is show in Figure \ref{fig:Balbus1998}. They observe the generation of MRI radially inward and outward \cite{Balbus1991}. Further in time, these becomes sheets of instabilities \cite{Hawley1992} that are coupled by magnetic field but are reconnected by numerical dissipation \cite{Julien2010}.
 
-There are many variations of numerical simulations using the local shearing box
-model with results worth learning from. \cite{Fromang&Papaloizou2007} and
+There are many variations of numerical simulations adapting the local shearing box
+model using different numerical methods etc. \cite{Fromang&Papaloizou2007} and
 \cite{Fromang2007} have shown that numerical results using the box model with
 zero net flux are highly dependent on the numerical method used and resolution
 of the grid unless explicit diffusion coefficients and the appropriate
@@ -593,17 +593,9 @@ process that sustains the magnetic field in planetary systems \cite{Lesur2008}.
     \label{fig:Balbus1998}
 \end{figure}
 
-
-\cite{Kirillov2012} presents a unifying description of the helical and
-azimuthal versions of MRI, and they also identify the universal character of
-the `Liu' limit $2(1 - 2) \approx - 0.8284$ for the critical Rossby number.
-From this universal characteristics, they are led to the prediction that the
-instability will be governed by a mode with an azimuthal wavenumber that is
-proportional to the ratio of axial to azimuthal applied magnetic field, when
-this ratio becomes large and the Rossby number is close to the Liu limit)
-
-Apart from the local shearing box model, other 3D models have been implemented
-as well. \cite{Liu2008} simulated nonlinear development of MRI in a non-ideal
+Apart from the local shearing box model, with technological advances and the
+decrease in computational cost, 3D global models have been implemented as well.
+\cite{Liu2008} simulated nonlinear development of MRI in a non-ideal
 magnetohydrodynamic Taylor-Couette flow (mimicking an on-going Princeton MRI
 experiment) using ZEUS-MP 2.0 code \citep{Hayes2006}, which is a time-explicit,
 compressible, astrophysical ideal MHD parallel 3D code with added viscosity and
@@ -615,15 +607,23 @@ regime ($ Re \le 1600$) enhances vertical angular momentum transport while in
 unstable MRI regime ($Re \ge 3200$), MRI kicks in, resulting in more radial
 angular momentum transport as compared with vertical \citep{Liu2008}.
 
-Other general relativistic global 3D MHD codes have been implemented to show
-the existence of MRI and explore other astronomical phenomena
-\citep{Villiers2003, Koide2000}. \cite{Kersale2006} simulated global MRI to
-look more into the nonlinear properties and the formation of a jet that
-transports vertical magnetic flux. A 3D hydrodynamic simulations explores the
-nonlinear evolution of vertical shear instability in accretion disk and finds
-that vertical dependence destabilizes the disk, leading to velocity
-fluctuations that increases angular momentum transport \citep{Arlt2004},
-contrary to \cite{Hawley1995}.
+General relativistic global 3D MHD codes have been implemented to show the
+existence of MRI and explore other astronomical phenomena 
+\citep{Meier2001, Villiers2003, Koide2000} (see Figure \ref{fig:Meier2001}).
+\cite{Kersale2006} simulated global MRI to look more into the nonlinear
+properties and the formation of a jet that transports vertical magnetic flux. A
+3D hydrodynamic simulations explores the nonlinear evolution of vertical shear
+instability in accretion disk and finds that vertical dependence destabilizes
+the disk, leading to velocity fluctuations that increases angular momentum
+transport \citep{Arlt2004}, contrary to \cite{Hawley1995}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Meier2001}
+    \caption{3D MHD simulation with generated propagation of relativistic jet \citep{Meier2001}. Colors indicate plasma density, arrows indicate the velocity while the silver tube follows the magnetic line of force. The jet spirals and culminate into a shock front on the right.}
+    \label{fig:Meier2001}
+\end{figure}
 
 
 
