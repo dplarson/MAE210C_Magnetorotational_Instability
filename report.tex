@@ -491,27 +491,29 @@ Generation of HMRI has since been experimentally proven by the PROMISE experimen
 \section{Numerical Work}
 
 On top of experiments mentioned in the previous section, numerical simulations
-are also employed to explore MRI. Direct numerical simulations (DNS) are typically used with the
-advance of supercomputers and dramatically decreased computing time. DNS of the
-magnetohydrodynamics (MHD) Navier--Stokes equations have had much success in the
-determination of the existence of MRI. Many of the numerical simulations assume
-axisymmetric, vertically global and incompressible flow if Alfven speed slower
-than sound speed as occurs in that regime that is stable to Taylor-Couette, the
-MHD equations can be simplified to be incompressible since it is not
-fundamental to the instability \citep{Balbus1991} with some exceptions
-\citep{Sano1998}. 
+are also employed to explore MRI. Direct numerical simulations (DNS) are
+typically used with the advance of supercomputers and dramatically decreased
+computing time. DNS of the magnetohydrodynamics (MHD) Navier--Stokes equations
+have had much success in the determination of the existence of MRI. Many of the
+numerical simulations assume axisymmetric, vertically global and incompressible
+flow if Alfven speed slower than sound speed as occurs in that regime that is
+stable to Taylor-Couette, the MHD equations can be simplified to be
+incompressible since it is not fundamental to the instability
+\citep{Balbus1991} with some exceptions \citep{Sano1998}.
 
 We begin with the widely used local shearing box model \citep{Balbus1991} which
 has special properties of the model equations that makes it easier to simulate
-(see Figure \ref{fig:shearbox}). This model was also computationally more feasible at that time instead of a global 3D model. The special properties are that the toroidal
-field drops out, there is no distinction between inward and outward directions
-(symmetry) and MRI becomes an exponentially growing instability \citep{Julien2010}. 
+(see Figure \ref{fig:shearbox}). This model was also computationally more
+feasible at that time instead of a global 3D model. The special properties are
+that the toroidal field drops out, there is no distinction between inward and
+outward directions (symmetry) and MRI becomes an exponentially growing
+instability \citep{Julien2010}.
 
 Periodic boundary conditions were used with an added shearing component to the
 radial direction. ``Method of characteristics-constrained transport'' algorithm
 as explained in \cite{Hawley1995} was implemented. This model with an initial
 input magnetic field with zero- volume average initiates MRI but may obliterate
-the magnetic field and thus suppress the turbulence. 
+the magnetic field and thus suppress the turbulence.
 
 The comparison of the 3D simulations results from \cite{Hawley1995} with the 2D
 results from \cite{Balbus1994} shows significant difference. The 2D results
@@ -523,7 +525,9 @@ significant density contrast, the shearing box model is not self-consistent.
 Purely hydrodynamic turbulence did not give significant angular momentum
 transport needed even when the initial conditions had strong turbulence
 structures. Their 3D results suggest that accretion disks are well described by
-Euler's, ignoring the viscous terms from Navier--Stokes \citep{Hawley1995}. They also note that saturation of MRI is important in the efficiency of the angular momentum transport.
+Euler's, ignoring the viscous terms from Navier--Stokes \citep{Hawley1995}.
+They also note that saturation of MRI is important in the efficiency of the
+angular momentum transport.
 
 
 \begin{figure}
@@ -542,24 +546,29 @@ Euler's, ignoring the viscous terms from Navier--Stokes \citep{Hawley1995}. They
     \label{fig:shearbox}
 \end{figure}
 
-A figure of numerical result using the shearing box model by \cite{Balbus1998} clearly showing MRI  is show in Figure \ref{fig:Balbus1998}. They observe the generation of MRI radially inward and outward \cite{Balbus1991}. Further in time, these becomes sheets of instabilities \cite{Hawley1992} that are coupled by magnetic field but are reconnected by numerical dissipation \cite{Julien2010}.
+A figure of numerical result using the shearing box model by \cite{Balbus1998}
+clearly showing MRI  is show in Figure \ref{fig:Balbus1998}. They observe the
+generation of MRI radially inward and outward \cite{Balbus1991}. Further in
+time, these becomes sheets of instabilities \cite{Hawley1992} that are coupled
+by magnetic field but are reconnected by numerical dissipation
+\cite{Julien2010}.
 
-There are many variations of numerical simulations adapting the local shearing box
-model using different numerical methods etc. \cite{Fromang&Papaloizou2007} and
-\cite{Fromang2007} have shown that numerical results using the box model with
-zero net flux are highly dependent on the numerical method used and resolution
-of the grid unless explicit diffusion coefficients and the appropriate
-dissipative scales are resolved . This issue has been considered in
+There are many variations of numerical simulations adapting the local shearing
+box model using different numerical methods etc. \cite{Fromang&Papaloizou2007}
+and \cite{Fromang2007} have shown that numerical results using the box model
+with zero net flux are highly dependent on the numerical method used and
+resolution of the grid unless explicit diffusion coefficients and the
+appropriate dissipative scales are resolved . This issue has been considered in
 \cite{Lesur2007} for cases with nonzero net vertical flux, where they found
 that both the viscosity and resistivity affect the amount of angular momentum
-transported by magnetohydrodynamic turbulence. 
+transported by magnetohydrodynamic turbulence.
 
 \cite{Sano1998} has shown that whether saturation occurs depends on the
 Elsasser number $\Delta \equiv v^2_A/\eta \Omega$, which describes the relative
 balance of Lorentz forces to Coriolis forces. Non-axisymmetric numerical
 simulations done by \cite{Fleming2000} suggest saturation does occur even when
 Elsasser number $  \Delta \ge 1$ if non-axisymmetric disturbances are allowed
-to evolve. 
+to evolve.
 
 Other variations of the shearing box models include vertically stratified disks
 as done in \cite{Miller1999}, who found that turbulent magnetised disk can
